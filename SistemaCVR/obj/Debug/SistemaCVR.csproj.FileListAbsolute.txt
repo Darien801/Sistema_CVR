@@ -27,3 +27,22 @@ C:\Users\brian\OneDrive\Desktop\Sistema_CVR-master\Sistema_CVR-master\SistemaCVR
 C:\Users\brian\OneDrive\Desktop\Sistema_CVR-master\Sistema_CVR-master\SistemaCVR\obj\Debug\SistemaCVR.csproj.CoreCompileInputs.cache
 C:\Users\brian\OneDrive\Desktop\Sistema_CVR-master\Sistema_CVR-master\SistemaCVR\obj\Debug\SistemaCVR.exe
 C:\Users\brian\OneDrive\Desktop\Sistema_CVR-master\Sistema_CVR-master\SistemaCVR\obj\Debug\SistemaCVR.pdb
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.csproj.AssemblyReference.cache
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.exe.config
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.exe
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.pdb
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\bin\Debug\SistemaCVR.exe.config
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\bin\Debug\SistemaCVR.exe
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\bin\Debug\SistemaCVR.pdb
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmCaracteristicas.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmClientes.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmEmpleado.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmEquipo.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmEstado.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmLogin.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmMenuPrincipal.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmCompras.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmVehiculos.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.Properties.Resources.resources
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.csproj.GenerateResource.cache
+C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.csproj.CoreCompileInputs.cache

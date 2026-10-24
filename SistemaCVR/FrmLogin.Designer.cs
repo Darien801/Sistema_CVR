@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnlMarca = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblEslogan = new System.Windows.Forms.Label();
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblNombreSistema = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.pnlMarca.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,15 @@
             this.pnlMarca.Name = "pnlMarca";
             this.pnlMarca.Size = new System.Drawing.Size(390, 623);
             this.pnlMarca.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Location = new System.Drawing.Point(26, 156);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 7);
+            this.label1.TabIndex = 6;
             // 
             // lblEslogan
             // 
@@ -168,22 +177,22 @@
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
-            this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblContraseña.Location = new System.Drawing.Point(107, 298);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(99, 23);
+            this.lblContraseña.Size = new System.Drawing.Size(118, 28);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña";
             // 
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblUsuario.Location = new System.Drawing.Point(107, 190);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(70, 23);
+            this.lblUsuario.Size = new System.Drawing.Size(84, 28);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -195,15 +204,6 @@
             this.lblSubtitulo.Size = new System.Drawing.Size(309, 23);
             this.lblSubtitulo.TabIndex = 2;
             this.lblSubtitulo.Text = "Ingrese tus credenciales para continuar";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(26, 156);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 7);
-            this.label1.TabIndex = 6;
             // 
             // FrmLogin
             // 

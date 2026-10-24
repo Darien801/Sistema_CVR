@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\",
+  "WorkspaceRootPath": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\downloads\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\downloads\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\downloads\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmclientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\downloads\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistemacvr\\frmvehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmvehiculos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistemacvr\\frmestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmestado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistemacvr\\frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmcompras.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\Program.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-20T23:50:06.415Z",
               "IsPinned": true,
@@ -44,38 +48,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmEquipo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmEquipo.cs",
-              "RelativeDocumentMoniker": "FrmEquipo.cs",
-              "ToolTip": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmEquipo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FrmEquipo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T01:23:37.855Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmLogin.cs",
-              "RelativeDocumentMoniker": "FrmLogin.cs",
-              "ToolTip": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FrmLogin.cs [Dise\u00F1o]",
+              "Title": "FrmVehiculos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmVehiculos.cs",
+              "RelativeDocumentMoniker": "FrmVehiculos.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmVehiculos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmVehiculos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T01:23:33.805Z",
+              "WhenOpened": "2026-10-24T06:31:54.202Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FrmClientes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmClientes.cs",
-              "RelativeDocumentMoniker": "FrmClientes.cs",
-              "ToolTip": "C:\\Users\\darie\\Downloads\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmClientes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FrmClientes.cs [Dise\u00F1o]",
+              "Title": "FrmEstado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmEstado.cs",
+              "RelativeDocumentMoniker": "FrmEstado.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmEstado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmEstado.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-24T01:23:31.481Z",
+              "WhenOpened": "2026-10-24T06:27:54.29Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmEmpleado.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmEmpleado.cs",
+              "RelativeDocumentMoniker": "FrmEmpleado.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmEmpleado.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmEmpleado.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T06:22:06.435Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmCompras.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmCompras.cs",
+              "RelativeDocumentMoniker": "FrmCompras.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\SistemaCVR\\FrmCompras.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmCompras.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T05:54:32.476Z",
               "EditorCaption": " [Dise\u00F1o]"
             }
           ]

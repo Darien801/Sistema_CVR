@@ -36,12 +36,12 @@
             this.txtPrecioDeCompra = new System.Windows.Forms.TextBox();
             this.txtNumeroDeMotor = new System.Windows.Forms.TextBox();
             this.txtChasis = new System.Windows.Forms.TextBox();
-            this.cboPaisDeOrigen = new System.Windows.Forms.ComboBox();
-            this.cboColor = new System.Windows.Forms.ComboBox();
+            this.cbxPaisDeOrigen = new System.Windows.Forms.ComboBox();
+            this.cbxColor = new System.Windows.Forms.ComboBox();
             this.nudAño = new System.Windows.Forms.NumericUpDown();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
-            this.cboModelo = new System.Windows.Forms.ComboBox();
-            this.cboMarca = new System.Windows.Forms.ComboBox();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
+            this.cbxModelo = new System.Windows.Forms.ComboBox();
+            this.cbxMarca = new System.Windows.Forms.ComboBox();
             this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtDescripcionObservaciones = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -108,12 +108,12 @@
             this.groupBox1.Controls.Add(this.txtPrecioDeCompra);
             this.groupBox1.Controls.Add(this.txtNumeroDeMotor);
             this.groupBox1.Controls.Add(this.txtChasis);
-            this.groupBox1.Controls.Add(this.cboPaisDeOrigen);
-            this.groupBox1.Controls.Add(this.cboColor);
+            this.groupBox1.Controls.Add(this.cbxPaisDeOrigen);
+            this.groupBox1.Controls.Add(this.cbxColor);
             this.groupBox1.Controls.Add(this.nudAño);
-            this.groupBox1.Controls.Add(this.cboTipo);
-            this.groupBox1.Controls.Add(this.cboModelo);
-            this.groupBox1.Controls.Add(this.cboMarca);
+            this.groupBox1.Controls.Add(this.cbxTipo);
+            this.groupBox1.Controls.Add(this.cbxModelo);
+            this.groupBox1.Controls.Add(this.cbxMarca);
             this.groupBox1.Controls.Add(this.txtPlaca);
             this.groupBox1.Controls.Add(this.txtDescripcionObservaciones);
             this.groupBox1.Controls.Add(this.label12);
@@ -174,23 +174,23 @@
             this.txtChasis.Size = new System.Drawing.Size(426, 34);
             this.txtChasis.TabIndex = 31;
             // 
-            // cboPaisDeOrigen
+            // cbxPaisDeOrigen
             // 
-            this.cboPaisDeOrigen.FormattingEnabled = true;
-            this.cboPaisDeOrigen.Location = new System.Drawing.Point(511, 160);
-            this.cboPaisDeOrigen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboPaisDeOrigen.Name = "cboPaisDeOrigen";
-            this.cboPaisDeOrigen.Size = new System.Drawing.Size(193, 36);
-            this.cboPaisDeOrigen.TabIndex = 30;
+            this.cbxPaisDeOrigen.FormattingEnabled = true;
+            this.cbxPaisDeOrigen.Location = new System.Drawing.Point(511, 160);
+            this.cbxPaisDeOrigen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxPaisDeOrigen.Name = "cbxPaisDeOrigen";
+            this.cbxPaisDeOrigen.Size = new System.Drawing.Size(193, 36);
+            this.cbxPaisDeOrigen.TabIndex = 30;
             // 
-            // cboColor
+            // cbxColor
             // 
-            this.cboColor.FormattingEnabled = true;
-            this.cboColor.Location = new System.Drawing.Point(96, 160);
-            this.cboColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboColor.Name = "cboColor";
-            this.cboColor.Size = new System.Drawing.Size(192, 36);
-            this.cboColor.TabIndex = 29;
+            this.cbxColor.FormattingEnabled = true;
+            this.cbxColor.Location = new System.Drawing.Point(96, 160);
+            this.cbxColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxColor.Name = "cbxColor";
+            this.cbxColor.Size = new System.Drawing.Size(192, 36);
+            this.cbxColor.TabIndex = 29;
             // 
             // nudAño
             // 
@@ -200,32 +200,32 @@
             this.nudAño.Size = new System.Drawing.Size(192, 34);
             this.nudAño.TabIndex = 28;
             // 
-            // cboTipo
+            // cbxTipo
             // 
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(96, 100);
-            this.cboTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(192, 36);
-            this.cboTipo.TabIndex = 27;
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(96, 100);
+            this.cbxTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(192, 36);
+            this.cbxTipo.TabIndex = 27;
             // 
-            // cboModelo
+            // cbxModelo
             // 
-            this.cboModelo.FormattingEnabled = true;
-            this.cboModelo.Location = new System.Drawing.Point(511, 39);
-            this.cboModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboModelo.Name = "cboModelo";
-            this.cboModelo.Size = new System.Drawing.Size(192, 36);
-            this.cboModelo.TabIndex = 26;
+            this.cbxModelo.FormattingEnabled = true;
+            this.cbxModelo.Location = new System.Drawing.Point(511, 39);
+            this.cbxModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxModelo.Name = "cbxModelo";
+            this.cbxModelo.Size = new System.Drawing.Size(192, 36);
+            this.cbxModelo.TabIndex = 26;
             // 
-            // cboMarca
+            // cbxMarca
             // 
-            this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(96, 39);
-            this.cboMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cboMarca.Name = "cboMarca";
-            this.cboMarca.Size = new System.Drawing.Size(192, 36);
-            this.cboMarca.TabIndex = 25;
+            this.cbxMarca.FormattingEnabled = true;
+            this.cbxMarca.Location = new System.Drawing.Point(96, 39);
+            this.cbxMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxMarca.Name = "cbxMarca";
+            this.cbxMarca.Size = new System.Drawing.Size(192, 36);
+            this.cbxMarca.TabIndex = 25;
             // 
             // txtPlaca
             // 
@@ -607,14 +607,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cboColor;
+        private System.Windows.Forms.ComboBox cbxColor;
         private System.Windows.Forms.NumericUpDown nudAño;
-        private System.Windows.Forms.ComboBox cboTipo;
-        private System.Windows.Forms.ComboBox cboModelo;
-        private System.Windows.Forms.ComboBox cboMarca;
+        private System.Windows.Forms.ComboBox cbxTipo;
+        private System.Windows.Forms.ComboBox cbxModelo;
+        private System.Windows.Forms.ComboBox cbxMarca;
         private System.Windows.Forms.TextBox txtNumeroDeMotor;
         private System.Windows.Forms.TextBox txtChasis;
-        private System.Windows.Forms.ComboBox cboPaisDeOrigen;
+        private System.Windows.Forms.ComboBox cbxPaisDeOrigen;
         private System.Windows.Forms.DateTimePicker dtpFechaDeCompra;
         private System.Windows.Forms.TextBox txtPrecioDeCompra;
         private System.Windows.Forms.GroupBox groupBox2;
