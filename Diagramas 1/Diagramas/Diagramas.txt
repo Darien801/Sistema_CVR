@@ -1,0 +1,226 @@
+
+erDiagram
+    vehiculo {
+        int id_vehiculo PK
+        int id_modelo FK
+        int id_marca FK
+        int id_estado FK
+        int id_compra FK
+        varchar placa UK
+        varchar chasis UK
+        varchar numeroMotor UK
+        decimal precioCompra
+        varchar ruta_imagen
+    }
+
+    modelo{
+        int id_modelo PK
+        varchar nombreModelo
+    }
+    marca{
+        int id_marca PK
+        varchar nombreMarca
+    }
+
+    compra {
+        int id_compra PK
+        int id_empleado FK
+        date fechaRegistro
+        varchar paisOrigen
+        varchar observaciones
+
+
+    }
+
+    venta {
+        int id_venta PK
+        int id_cliente FK
+        int id_empleado FK
+        int id_vehiculo FK
+        date fecha
+        decimal precioVenta
+        varchar estadoVenta
+        varchar observaciones
+    }
+
+    renta {
+        int id_renta PK
+        int id_cliente FK
+        int id_empleado FK
+        int id_vehiculo FK
+        datetime fecha_inicio
+        datetime fecha_fin
+        datetime fecha_devolucion
+        decimal precioHora
+        varchar estadoRenta
+        varchar observaciones
+    }
+
+    cliente {
+        int id_cliente PK
+        varchar nombre
+        varchar apellido
+        varchar DUI UK
+        varchar direccion
+        varchar telefono
+    }
+
+    empleado {
+        int id_empleado PK
+        varchar nombre
+        varchar apellido
+        varchar DUI UK
+        varchar nombreEmpleado
+        varchar hashEmpleado
+        varchar rolEmpleado
+        varchar estadoEmpleado
+    }
+
+    accesorio {
+        int id_accesorio PK
+        varchar nombreAccesorio UK
+        varchar descripcion
+    }
+
+    estado {
+        int id_estado PK
+        varchar nombreEstado
+    }
+
+    documentacion {
+        int id_documento PK
+        int id_vehiculo FK
+        int id_venta FK
+        int id_renta FK
+        varchar tipoDocumento
+        varchar rutaArchivo
+        date fechaRegistro
+    }
+
+    %% Relaciones principales
+    modelo ||--o{ vehiculo : pertenece
+    marca ||--o{ vehiculo : pertenece
+    estado ||--o{ vehiculo : define
+    compra ||--o{ vehiculo : genera
+    cliente ||--o{ venta : realiza
+    cliente ||--o{ renta : realiza
+    empleado ||--o{ venta : atiende
+    empleado ||--o{ renta : atiende
+    vehiculo ||--o{ venta : puede_estar
+    vehiculo ||--o{ renta : puede_estar
+    renta ||--o{ accesorio : incluye
+    documentacion ||--o{ vehiculo : registra
+    documentacion ||--o{ venta : asocia
+    documentacion ||--o{ renta : asocia
+---------------------------------------------------
+
+
+Relacional
+
+erDiagram
+    modelo {
+        int id_modelo PK
+        varchar nombreModelo
+        varchar nombreMarca
+        varchar nombreTipo
+    }
+
+    estado {
+        int id_estado PK
+        varchar nombreEstado
+    }
+
+    compra {
+        int id_compra PK
+        date fechaRegistro
+        varchar paisOrigen
+        varchar descripcionVehiculo
+        varchar observaciones
+        varchar ruta_imagen
+    }
+
+    vehiculo {
+        int id_vehiculo PK
+        int id_modelo FK
+        int id_estado FK
+        int id_compra FK
+        varchar placa UK
+        varchar chasis
+        varchar numeroMotor
+        decimal precioCompra
+    }
+
+    cliente {
+        int id_cliente PK
+        varchar nombre
+        varchar apellido
+        varchar DUI UK
+        varchar direccion
+        varchar telefono
+    }
+
+    empleado {
+        int id_empleado PK
+        varchar nombre
+        varchar apellido
+        varchar DUI UK
+        varchar nombreEmpleado
+        varchar hashEmpleado
+        varchar rolEmpleado
+        varchar estadoEmpleado
+    }
+
+    venta {
+        int id_venta PK
+        int id_cliente FK
+        int id_empleado FK
+        int id_vehiculo FK
+        date fecha
+        decimal precioVenta
+        varchar estadoVenta
+        varchar observaciones
+    }
+
+    renta {
+        int id_renta PK
+        int id_cliente FK
+        int id_empleado FK
+        int id_vehiculo FK
+        datetime fecha_inicio
+        datetime fecha_fin
+        datetime fecha_devolucion
+        decimal precioHora
+        varchar estadoRenta
+        varchar observaciones
+    }
+
+    accesorio {
+        int id_accesorio PK
+        varchar nombreAccesorio UK
+        varchar descripcion
+    }
+
+    documentacion {
+        int id_documento PK
+        int id_vehiculo FK
+        int id_venta FK
+        int id_renta FK
+        varchar tipoDocumento
+        varchar rutaArchivo
+        date fechaRegistro
+    }
+
+    modelo ||--o{ vehiculo : pertenece
+    estado ||--o{ vehiculo : define
+    compra ||--o{ vehiculo : genera
+    cliente ||--o{ venta : realiza
+    cliente ||--o{ renta : realiza
+    empleado ||--o{ venta : atiende
+    empleado ||--o{ renta : atiende
+    vehiculo ||--o{ venta : registra
+    vehiculo ||--o{ renta : registra
+    vehiculo ||--o{ documentacion : tiene
+    venta ||--o{ documentacion : asocia
+    renta ||--o{ documentacion : asocia
+
+
