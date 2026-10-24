@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\brian\\OneDrive\\Desktop\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\brian\\onedrive\\desktop\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\frmcaracteristicas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmcaracteristicas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\brian\\onedrive\\desktop\\sistema_cvr-master\\sistema_cvr-master\\sistemacvr\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCaracteristicas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\brian\\OneDrive\\Desktop\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmCaracteristicas.cs",
+              "RelativeDocumentMoniker": "FrmCaracteristicas.cs",
+              "ToolTip": "C:\\Users\\brian\\OneDrive\\Desktop\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmCaracteristicas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmCaracteristicas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T00:51:56.98Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\brian\\OneDrive\\Desktop\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmMenuPrincipal.cs",
+              "RelativeDocumentMoniker": "FrmMenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\brian\\OneDrive\\Desktop\\Sistema_CVR-master\\Sistema_CVR-master\\SistemaCVR\\FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-24T00:51:45.724Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

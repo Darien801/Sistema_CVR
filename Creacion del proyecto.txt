@@ -1,0 +1,68 @@
+# ESTÁNDARES DE DISEÑO – SISTEMA SCVR
+Sistema de Gestión de Compra, Venta y Renta de Vehículos
+
+
+## 1. TIPO DE LETRA
+
+- Fuente: Segoe UI.
+
+
+
+## 2. COLORES DEL SISTEMA
+
+- Color azul : RGB(0, 0, 161).
+- Color blanco : RGB(224;224;224)
+
+
+
+## 3. CONFIGURACIÓN DE LOS TEXTBOX
+
+Propiedades generales:
+- Font: Segoe UI, 12 pt.
+- BorderStyle: FixedSingle.
+- BackColor: Blanco.
+- ForeColor: Negro.
+- Enabled: True.
+- Anchor: Top, Left, Right.
+
+
+
+## 4. CONFIGURACIÓN DE LOS BOTONES
+
+Propiedades generales:
+- FlatStyle: Flat.
+- FlatAppearance.BorderSize: 0.
+- Font: Segoe UI, 12 pt, Bold.
+- Cursor: Hand.
+
+
+## 5. NOMBRES DE LOS CONTROLES
+
+Utilizar nombres descriptivos y mantener una convención uniforme:
+
+- Formularios: FrmClientes, FrmVehiculos, FrmVentas.
+- Paneles: pnlSuperior, pnlContenido, pnlBotones.
+- Etiquetas: lblTitulo, lblNombres, lblDui.
+- Campos de texto: txtNombres, txtDui, txtTelefono.
+- Botones: btnGuardar, btnEditar, btnCancelar.
+- DataGridView: dgvClientes, dgvVehiculos.
+- ComboBox: cmbEstado, cmbMarca.
+- CheckBox: chkMostrarContraseña.
+- PictureBox: picLogo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+El Size del los formularios hijos debe adaptarse a el pnlContenido del FrmPrincipal, por eso el Size máximo de cualquier formulario hijo es de 1740; 1000
+
+
+
