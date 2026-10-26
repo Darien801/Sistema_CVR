@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsConexion.cs" />
     <Compile Include="FrmCaracteristicas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +162,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="IMG\clientes_24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMG\icons8-prueba-50.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
