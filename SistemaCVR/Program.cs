@@ -16,7 +16,7 @@ namespace SistemaCVR
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEmpleado());
+            Application.Run(new FrmVehiculos());
         }
     }
 }

@@ -93,7 +93,7 @@ namespace SistemaCVR
         {
             if(id_seleccionado == 0)
             {
-                MessageBox.Show("Seleccione el registro que desa editar");
+                MessageBox.Show("Seleccione el registro que desea editar");
                 return;
             }
 

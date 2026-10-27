@@ -48,11 +48,11 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDUI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -108,6 +108,7 @@
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEliminar
             // 
@@ -117,12 +118,13 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEliminar.Location = new System.Drawing.Point(330, 283);
+            this.btnEliminar.Location = new System.Drawing.Point(333, 305);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(102, 39);
             this.btnEliminar.TabIndex = 11;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -138,6 +140,7 @@
             this.btnEditar.TabIndex = 10;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnGuardar
             // 
@@ -153,6 +156,7 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtTelefonoCliente
             // 
@@ -258,54 +262,37 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(770, 34);
             this.txtBuscar.TabIndex = 13;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
+            this.colNombre,
+            this.colApellido,
             this.colDUI,
             this.colDireccion,
-            this.colTelefono,
-            this.colNombre,
-            this.colApellido});
+            this.colTelefono});
             this.dgvClientes.Location = new System.Drawing.Point(21, 530);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
             this.dgvClientes.Size = new System.Drawing.Size(960, 260);
             this.dgvClientes.TabIndex = 15;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // colID
             // 
+            this.colID.DataPropertyName = "id_cliente";
             this.colID.HeaderText = "ID";
             this.colID.MinimumWidth = 6;
             this.colID.Name = "colID";
             this.colID.Width = 110;
             // 
-            // colDUI
-            // 
-            this.colDUI.HeaderText = "DUI";
-            this.colDUI.MinimumWidth = 6;
-            this.colDUI.Name = "colDUI";
-            this.colDUI.Width = 110;
-            // 
-            // colDireccion
-            // 
-            this.colDireccion.HeaderText = "Dirección";
-            this.colDireccion.MinimumWidth = 6;
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.Width = 110;
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.HeaderText = "Télefono";
-            this.colTelefono.MinimumWidth = 6;
-            this.colTelefono.Name = "colTelefono";
-            this.colTelefono.Width = 110;
-            // 
             // colNombre
             // 
+            this.colNombre.DataPropertyName = "nombre";
             this.colNombre.HeaderText = "Nombre";
             this.colNombre.MinimumWidth = 6;
             this.colNombre.Name = "colNombre";
@@ -313,10 +300,35 @@
             // 
             // colApellido
             // 
+            this.colApellido.DataPropertyName = "apellido";
             this.colApellido.HeaderText = "Apellido";
             this.colApellido.MinimumWidth = 6;
             this.colApellido.Name = "colApellido";
             this.colApellido.Width = 110;
+            // 
+            // colDUI
+            // 
+            this.colDUI.DataPropertyName = "DUI";
+            this.colDUI.HeaderText = "DUI";
+            this.colDUI.MinimumWidth = 6;
+            this.colDUI.Name = "colDUI";
+            this.colDUI.Width = 110;
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.DataPropertyName = "direccion";
+            this.colDireccion.HeaderText = "Dirección";
+            this.colDireccion.MinimumWidth = 6;
+            this.colDireccion.Name = "colDireccion";
+            this.colDireccion.Width = 110;
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.DataPropertyName = "telefono";
+            this.colTelefono.HeaderText = "Télefono";
+            this.colTelefono.MinimumWidth = 6;
+            this.colTelefono.Name = "colTelefono";
+            this.colTelefono.Width = 110;
             // 
             // label13
             // 
@@ -355,6 +367,7 @@
             this.Name = "FrmClientes";
             this.Text = "Gestión de Clientes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmClientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
@@ -383,12 +396,12 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDUI;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
-        private System.Windows.Forms.Label label13;
     }
 }

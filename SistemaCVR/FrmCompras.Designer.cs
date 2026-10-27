@@ -32,51 +32,34 @@
             this.lblCompras = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpFechaDeCompra = new System.Windows.Forms.DateTimePicker();
-            this.txtPrecioDeCompra = new System.Windows.Forms.TextBox();
-            this.txtNumeroDeMotor = new System.Windows.Forms.TextBox();
-            this.txtChasis = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.cbxPaisDeOrigen = new System.Windows.Forms.ComboBox();
-            this.cbxColor = new System.Windows.Forms.ComboBox();
-            this.nudAño = new System.Windows.Forms.NumericUpDown();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.cbxModelo = new System.Windows.Forms.ComboBox();
             this.cbxMarca = new System.Windows.Forms.ComboBox();
-            this.txtPlaca = new System.Windows.Forms.TextBox();
             this.txtDescripcionObservaciones = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.dgvCompras = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmpleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPaisDeOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAño = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPaisDeOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChasis = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumeroDeMotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPrecioDeCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbxEmpleado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAño)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
             this.SuspendLayout();
@@ -104,27 +87,15 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpFechaDeCompra);
-            this.groupBox1.Controls.Add(this.txtPrecioDeCompra);
-            this.groupBox1.Controls.Add(this.txtNumeroDeMotor);
-            this.groupBox1.Controls.Add(this.txtChasis);
+            this.groupBox1.Controls.Add(this.cbxEmpleado);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cbxPaisDeOrigen);
-            this.groupBox1.Controls.Add(this.cbxColor);
-            this.groupBox1.Controls.Add(this.nudAño);
             this.groupBox1.Controls.Add(this.cbxTipo);
             this.groupBox1.Controls.Add(this.cbxModelo);
             this.groupBox1.Controls.Add(this.cbxMarca);
-            this.groupBox1.Controls.Add(this.txtPlaca);
             this.groupBox1.Controls.Add(this.txtDescripcionObservaciones);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -139,71 +110,55 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del vehiculo";
             // 
-            // dtpFechaDeCompra
+            // label2
             // 
-            this.dtpFechaDeCompra.Location = new System.Drawing.Point(511, 372);
-            this.dtpFechaDeCompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpFechaDeCompra.Name = "dtpFechaDeCompra";
-            this.dtpFechaDeCompra.Size = new System.Drawing.Size(193, 34);
-            this.dtpFechaDeCompra.TabIndex = 34;
-            // 
-            // txtPrecioDeCompra
-            // 
-            this.txtPrecioDeCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecioDeCompra.Location = new System.Drawing.Point(511, 278);
-            this.txtPrecioDeCompra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecioDeCompra.Name = "txtPrecioDeCompra";
-            this.txtPrecioDeCompra.Size = new System.Drawing.Size(194, 34);
-            this.txtPrecioDeCompra.TabIndex = 33;
-            // 
-            // txtNumeroDeMotor
-            // 
-            this.txtNumeroDeMotor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNumeroDeMotor.Location = new System.Drawing.Point(19, 466);
-            this.txtNumeroDeMotor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNumeroDeMotor.Name = "txtNumeroDeMotor";
-            this.txtNumeroDeMotor.Size = new System.Drawing.Size(426, 34);
-            this.txtNumeroDeMotor.TabIndex = 32;
-            // 
-            // txtChasis
-            // 
-            this.txtChasis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtChasis.Location = new System.Drawing.Point(19, 372);
-            this.txtChasis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtChasis.Name = "txtChasis";
-            this.txtChasis.Size = new System.Drawing.Size(426, 34);
-            this.txtChasis.TabIndex = 31;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(13, 182);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 28);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "Empleado";
             // 
             // cbxPaisDeOrigen
             // 
             this.cbxPaisDeOrigen.FormattingEnabled = true;
-            this.cbxPaisDeOrigen.Location = new System.Drawing.Point(511, 160);
+            this.cbxPaisDeOrigen.Items.AddRange(new object[] {
+            "El Salvador",
+            "Estados Unidos",
+            "Japón",
+            "Corea del Sur",
+            "China",
+            "Alemania",
+            "México",
+            "Canadá",
+            "Brasil",
+            "India",
+            "Reino Unido",
+            "Francia",
+            "Italia",
+            "Tailandia"});
+            this.cbxPaisDeOrigen.Location = new System.Drawing.Point(513, 109);
             this.cbxPaisDeOrigen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxPaisDeOrigen.Name = "cbxPaisDeOrigen";
             this.cbxPaisDeOrigen.Size = new System.Drawing.Size(193, 36);
             this.cbxPaisDeOrigen.TabIndex = 30;
             // 
-            // cbxColor
-            // 
-            this.cbxColor.FormattingEnabled = true;
-            this.cbxColor.Location = new System.Drawing.Point(96, 160);
-            this.cbxColor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxColor.Name = "cbxColor";
-            this.cbxColor.Size = new System.Drawing.Size(192, 36);
-            this.cbxColor.TabIndex = 29;
-            // 
-            // nudAño
-            // 
-            this.nudAño.Location = new System.Drawing.Point(511, 100);
-            this.nudAño.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudAño.Name = "nudAño";
-            this.nudAño.Size = new System.Drawing.Size(192, 34);
-            this.nudAño.TabIndex = 28;
-            // 
             // cbxTipo
             // 
             this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(96, 100);
+            this.cbxTipo.Items.AddRange(new object[] {
+            "Sedán",
+            "Hatchback",
+            "SUV",
+            "Pickup",
+            "Camioneta",
+            "Coupé",
+            "Convertible",
+            "Van",
+            "Microbús",
+            "Camión",
+            "Motocicleta"});
+            this.cbxTipo.Location = new System.Drawing.Point(123, 112);
             this.cbxTipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(192, 36);
@@ -212,7 +167,7 @@
             // cbxModelo
             // 
             this.cbxModelo.FormattingEnabled = true;
-            this.cbxModelo.Location = new System.Drawing.Point(511, 39);
+            this.cbxModelo.Location = new System.Drawing.Point(513, 46);
             this.cbxModelo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxModelo.Name = "cbxModelo";
             this.cbxModelo.Size = new System.Drawing.Size(192, 36);
@@ -221,44 +176,26 @@
             // cbxMarca
             // 
             this.cbxMarca.FormattingEnabled = true;
-            this.cbxMarca.Location = new System.Drawing.Point(96, 39);
+            this.cbxMarca.Location = new System.Drawing.Point(123, 46);
             this.cbxMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(192, 36);
             this.cbxMarca.TabIndex = 25;
             // 
-            // txtPlaca
-            // 
-            this.txtPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPlaca.Location = new System.Drawing.Point(17, 278);
-            this.txtPlaca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPlaca.Name = "txtPlaca";
-            this.txtPlaca.Size = new System.Drawing.Size(429, 34);
-            this.txtPlaca.TabIndex = 24;
-            // 
             // txtDescripcionObservaciones
             // 
             this.txtDescripcionObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDescripcionObservaciones.Location = new System.Drawing.Point(19, 560);
+            this.txtDescripcionObservaciones.Location = new System.Drawing.Point(13, 414);
             this.txtDescripcionObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDescripcionObservaciones.Multiline = true;
             this.txtDescripcionObservaciones.Name = "txtDescripcionObservaciones";
             this.txtDescripcionObservaciones.Size = new System.Drawing.Size(685, 167);
             this.txtDescripcionObservaciones.TabIndex = 23;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(507, 332);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(177, 28);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Fecha de compra:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 519);
+            this.label4.Location = new System.Drawing.Point(6, 373);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(286, 28);
             this.label4.TabIndex = 21;
@@ -267,70 +204,16 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(332, 160);
+            this.label11.Location = new System.Drawing.Point(353, 112);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(154, 28);
             this.label11.TabIndex = 20;
             this.label11.Text = "Pais de Origen:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(507, 238);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 28);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Precio de Compra:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(21, 426);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(189, 28);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Numero de Motor:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 332);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 28);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Chasis:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 238);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 28);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Placa:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 28);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Color:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(332, 108);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 28);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Año:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 108);
+            this.label5.Location = new System.Drawing.Point(13, 112);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 28);
             this.label5.TabIndex = 4;
@@ -339,7 +222,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(332, 48);
+            this.label3.Location = new System.Drawing.Point(370, 49);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 28);
             this.label3.TabIndex = 2;
@@ -349,7 +232,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 48);
+            this.label1.Location = new System.Drawing.Point(13, 49);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(76, 28);
             this.label1.TabIndex = 0;
@@ -363,29 +246,14 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(713, 42);
+            this.btnLimpiar.Location = new System.Drawing.Point(587, 41);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(101, 39);
             this.btnLimpiar.TabIndex = 12;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEliminar.Location = new System.Drawing.Point(837, 41);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(101, 39);
-            this.btnEliminar.TabIndex = 11;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnEditar
             // 
@@ -395,7 +263,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEditar.Location = new System.Drawing.Point(584, 41);
+            this.btnEditar.Location = new System.Drawing.Point(811, 20);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(101, 39);
@@ -418,13 +286,13 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtBuscar);
             this.groupBox2.Controls.Add(this.btnBuscar);
             this.groupBox2.Controls.Add(this.btnEditar);
-            this.groupBox2.Controls.Add(this.btnEliminar);
             this.groupBox2.Controls.Add(this.btnLimpiar);
             this.groupBox2.Controls.Add(this.btnGuardar);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,16 +323,13 @@
             this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompras.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
-            this.colMarca,
-            this.colModelo,
-            this.colTipo,
-            this.colAño,
-            this.colPaisDeOrigen,
-            this.colPlaca,
-            this.colChasis,
-            this.colNumeroDeMotor,
+            this.colEmpleado,
             this.colFechaDeCompra,
-            this.colPrecioDeCompra});
+            this.colPaisDeOrigen,
+            this.colObservaciones,
+            this.colTipo,
+            this.colMarca,
+            this.colModelo});
             this.dgvCompras.Location = new System.Drawing.Point(752, 207);
             this.dgvCompras.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCompras.Name = "dgvCompras";
@@ -475,13 +340,55 @@
             // 
             // colID
             // 
+            this.colID.DataPropertyName = "id_compra";
             this.colID.HeaderText = "ID";
             this.colID.MinimumWidth = 6;
             this.colID.Name = "colID";
             this.colID.Width = 125;
             // 
+            // colEmpleado
+            // 
+            this.colEmpleado.DataPropertyName = "Empleado";
+            this.colEmpleado.HeaderText = "Empleado";
+            this.colEmpleado.MinimumWidth = 6;
+            this.colEmpleado.Name = "colEmpleado";
+            this.colEmpleado.Width = 125;
+            // 
+            // colFechaDeCompra
+            // 
+            this.colFechaDeCompra.DataPropertyName = "fechaRegistro";
+            this.colFechaDeCompra.HeaderText = "Fecha de Compra";
+            this.colFechaDeCompra.MinimumWidth = 6;
+            this.colFechaDeCompra.Name = "colFechaDeCompra";
+            this.colFechaDeCompra.Width = 125;
+            // 
+            // colPaisDeOrigen
+            // 
+            this.colPaisDeOrigen.DataPropertyName = "paisOrigen";
+            this.colPaisDeOrigen.HeaderText = "Pais de Origen";
+            this.colPaisDeOrigen.MinimumWidth = 6;
+            this.colPaisDeOrigen.Name = "colPaisDeOrigen";
+            this.colPaisDeOrigen.Width = 125;
+            // 
+            // colObservaciones
+            // 
+            this.colObservaciones.DataPropertyName = "observaciones";
+            this.colObservaciones.HeaderText = "Observaciones";
+            this.colObservaciones.MinimumWidth = 6;
+            this.colObservaciones.Name = "colObservaciones";
+            this.colObservaciones.Width = 125;
+            // 
+            // colTipo
+            // 
+            this.colTipo.DataPropertyName = "nombreTipo";
+            this.colTipo.HeaderText = "Tipo";
+            this.colTipo.MinimumWidth = 6;
+            this.colTipo.Name = "colTipo";
+            this.colTipo.Width = 125;
+            // 
             // colMarca
             // 
+            this.colMarca.DataPropertyName = "Marca";
             this.colMarca.HeaderText = "Marca";
             this.colMarca.MinimumWidth = 6;
             this.colMarca.Name = "colMarca";
@@ -489,66 +396,11 @@
             // 
             // colModelo
             // 
+            this.colModelo.DataPropertyName = "Modelo";
             this.colModelo.HeaderText = "Modelo";
             this.colModelo.MinimumWidth = 6;
             this.colModelo.Name = "colModelo";
             this.colModelo.Width = 125;
-            // 
-            // colTipo
-            // 
-            this.colTipo.HeaderText = "Tipo";
-            this.colTipo.MinimumWidth = 6;
-            this.colTipo.Name = "colTipo";
-            this.colTipo.Width = 125;
-            // 
-            // colAño
-            // 
-            this.colAño.HeaderText = "Año";
-            this.colAño.MinimumWidth = 6;
-            this.colAño.Name = "colAño";
-            this.colAño.Width = 125;
-            // 
-            // colPaisDeOrigen
-            // 
-            this.colPaisDeOrigen.HeaderText = "Pais de Origen";
-            this.colPaisDeOrigen.MinimumWidth = 6;
-            this.colPaisDeOrigen.Name = "colPaisDeOrigen";
-            this.colPaisDeOrigen.Width = 125;
-            // 
-            // colPlaca
-            // 
-            this.colPlaca.HeaderText = "Placa";
-            this.colPlaca.MinimumWidth = 6;
-            this.colPlaca.Name = "colPlaca";
-            this.colPlaca.Width = 125;
-            // 
-            // colChasis
-            // 
-            this.colChasis.HeaderText = "Chasis";
-            this.colChasis.MinimumWidth = 6;
-            this.colChasis.Name = "colChasis";
-            this.colChasis.Width = 125;
-            // 
-            // colNumeroDeMotor
-            // 
-            this.colNumeroDeMotor.HeaderText = "Numero de motor";
-            this.colNumeroDeMotor.MinimumWidth = 6;
-            this.colNumeroDeMotor.Name = "colNumeroDeMotor";
-            this.colNumeroDeMotor.Width = 125;
-            // 
-            // colFechaDeCompra
-            // 
-            this.colFechaDeCompra.HeaderText = "Fecha de Compra";
-            this.colFechaDeCompra.MinimumWidth = 6;
-            this.colFechaDeCompra.Name = "colFechaDeCompra";
-            this.colFechaDeCompra.Width = 125;
-            // 
-            // colPrecioDeCompra
-            // 
-            this.colPrecioDeCompra.HeaderText = "Precio de compra";
-            this.colPrecioDeCompra.MinimumWidth = 6;
-            this.colPrecioDeCompra.Name = "colPrecioDeCompra";
-            this.colPrecioDeCompra.Width = 125;
             // 
             // label13
             // 
@@ -557,6 +409,27 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(1700, 1);
             this.label13.TabIndex = 20;
+            // 
+            // cbxEmpleado
+            // 
+            this.cbxEmpleado.FormattingEnabled = true;
+            this.cbxEmpleado.Items.AddRange(new object[] {
+            "Sedán",
+            "Hatchback",
+            "SUV",
+            "Pickup",
+            "Camioneta",
+            "Coupé",
+            "Convertible",
+            "Van",
+            "Microbús",
+            "Camión",
+            "Motocicleta"});
+            this.cbxEmpleado.Location = new System.Drawing.Point(144, 182);
+            this.cbxEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxEmpleado.Name = "cbxEmpleado";
+            this.cbxEmpleado.Size = new System.Drawing.Size(192, 36);
+            this.cbxEmpleado.TabIndex = 36;
             // 
             // FrmCompras
             // 
@@ -573,9 +446,9 @@
             this.Name = "FrmCompras";
             this.Text = "Compras";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmCompras_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAño)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();
@@ -590,46 +463,30 @@
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPlaca;
         private System.Windows.Forms.TextBox txtDescripcionObservaciones;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbxColor;
-        private System.Windows.Forms.NumericUpDown nudAño;
         private System.Windows.Forms.ComboBox cbxTipo;
         private System.Windows.Forms.ComboBox cbxModelo;
         private System.Windows.Forms.ComboBox cbxMarca;
-        private System.Windows.Forms.TextBox txtNumeroDeMotor;
-        private System.Windows.Forms.TextBox txtChasis;
         private System.Windows.Forms.ComboBox cbxPaisDeOrigen;
-        private System.Windows.Forms.DateTimePicker dtpFechaDeCompra;
-        private System.Windows.Forms.TextBox txtPrecioDeCompra;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvCompras;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmpleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPaisDeOrigen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colObservaciones;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn colModelo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colAño;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPaisDeOrigen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPlaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colChasis;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumeroDeMotor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaDeCompra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPrecioDeCompra;
+        private System.Windows.Forms.ComboBox cbxEmpleado;
     }
 }

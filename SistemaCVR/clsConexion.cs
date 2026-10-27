@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SistemaCVR
 {
@@ -48,11 +49,36 @@ namespace SistemaCVR
             using (SqlConnection conexion = new SqlConnection(cadena))
             using (SqlCommand comando = new SqlCommand(sql, conexion))
             {
-                comando.Parameters.AddRange(parametros);
-                conexion.Open();
-                filasAfectadas = comando.ExecuteNonQuery();
+                
+                    comando.Parameters.AddRange(parametros);
+                    conexion.Open();
+                    filasAfectadas = comando.ExecuteNonQuery();
             }
             return filasAfectadas;
         }
+
+
+        // -------------------------
+        public void CargarCombos(
+            ComboBox combo,
+            string sql,
+            string visible,
+            string valor
+            )
+        {
+            combo.DataSource = Consultar(sql);
+            combo.DisplayMember = visible;
+            combo.ValueMember = valor;
+            combo.SelectedIndex = 0;
+        }
+
+
+
+
+
+
+
+
+
     }
 }
