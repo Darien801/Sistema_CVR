@@ -32,6 +32,7 @@
             this.lblCompras = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxEmpleado = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxPaisDeOrigen = new System.Windows.Forms.ComboBox();
             this.cbxTipo = new System.Windows.Forms.ComboBox();
@@ -58,7 +59,6 @@
             this.colMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colModelo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
-            this.cbxEmpleado = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
@@ -84,6 +84,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(359, 34);
             this.txtBuscar.TabIndex = 15;
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // groupBox1
             // 
@@ -109,6 +110,27 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del vehiculo";
+            // 
+            // cbxEmpleado
+            // 
+            this.cbxEmpleado.FormattingEnabled = true;
+            this.cbxEmpleado.Items.AddRange(new object[] {
+            "Sedán",
+            "Hatchback",
+            "SUV",
+            "Pickup",
+            "Camioneta",
+            "Coupé",
+            "Convertible",
+            "Van",
+            "Microbús",
+            "Camión",
+            "Motocicleta"});
+            this.cbxEmpleado.Location = new System.Drawing.Point(144, 182);
+            this.cbxEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbxEmpleado.Name = "cbxEmpleado";
+            this.cbxEmpleado.Size = new System.Drawing.Size(192, 36);
+            this.cbxEmpleado.TabIndex = 36;
             // 
             // label2
             // 
@@ -409,27 +431,6 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(1700, 1);
             this.label13.TabIndex = 20;
-            // 
-            // cbxEmpleado
-            // 
-            this.cbxEmpleado.FormattingEnabled = true;
-            this.cbxEmpleado.Items.AddRange(new object[] {
-            "Sedán",
-            "Hatchback",
-            "SUV",
-            "Pickup",
-            "Camioneta",
-            "Coupé",
-            "Convertible",
-            "Van",
-            "Microbús",
-            "Camión",
-            "Motocicleta"});
-            this.cbxEmpleado.Location = new System.Drawing.Point(144, 182);
-            this.cbxEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbxEmpleado.Name = "cbxEmpleado";
-            this.cbxEmpleado.Size = new System.Drawing.Size(192, 36);
-            this.cbxEmpleado.TabIndex = 36;
             // 
             // FrmCompras
             // 

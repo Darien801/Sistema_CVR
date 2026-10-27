@@ -19,6 +19,77 @@ namespace SistemaCVR
             InitializeComponent();
         }
 
+        private void LimpiarCampos()
+        {
+            cbxMarca.SelectedIndex = -1;
+            cbxModelo.SelectedIndex = -1;
+            cbxTipo.SelectedIndex = -1;
+            cbxEmpleado.SelectedIndex = -1;
+            cbxPaisDeOrigen.SelectedIndex = -1;
+            txtDescripcionObservaciones.Clear();
+        }
+
+        private void CargarDatos()
+        {
+            string sql = @" 
+                            SELECT
+                                id_compra,
+                                em.nombre AS Empleado,
+                                fechaRegistro, 
+                                paisOrigen, 
+                                observaciones,
+                                c.nombreTipo, 
+                                ma.nombreMarca AS Marca, 
+                                mo.nombreModelo AS Modelo 
+                            FROM compra c
+                            INNER JOIN marca ma
+                                ON c.id_marca = ma.id_marca
+                            INNER JOIN modelo mo
+                                ON c.id_modelo = mo.id_modelo
+                            INNER JOIN empleado em
+                                ON c.id_empleado = em.id_empleado
+                          ";
+            dgvCompras.DataSource = con.Consultar(sql);
+            dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void Filtrar( string filtrar)
+        {
+            string sql = @"
+                             SELECT
+                                id_compra,
+                                em.nombre AS Empleado,
+                                fechaRegistro, 
+                                paisOrigen, 
+                                observaciones,
+                                c.nombreTipo, 
+                                ma.nombreMarca AS Marca, 
+                                mo.nombreModelo AS Modelo 
+                            FROM compra c
+                            INNER JOIN marca ma
+                                ON c.id_marca = ma.id_marca
+                            INNER JOIN modelo mo
+                                ON c.id_modelo = mo.id_modelo
+                            INNER JOIN empleado em
+                                ON c.id_empleado = em.id_empleado
+                            WHERE
+                                id_compra LIKE @filtro OR
+                                em.nombre LIKE @filtro OR
+                                paisOrigen LIKE @filtro OR
+                                c.nombreTipo LIKE @filtro OR
+                                ma.nombreMarca LIKE @filtro OR
+                                mo.nombreModelo LIKE @filtro
+                         ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@filtro", $"%{filtrar.Trim()}%" )
+            };
+
+            dgvCompras.DataSource = con.FiltrarDatos(sql, parametros);
+            
+        }
+
         private void FrmCompras_Load(object sender, EventArgs e)
         {
             con.CargarCombos(
@@ -46,39 +117,7 @@ namespace SistemaCVR
         }
 
 
-        private void LimpiarCampos()
-        {
-            cbxMarca.SelectedIndex = -1;
-            cbxModelo.SelectedIndex =-1;
-            cbxTipo.SelectedIndex =-1;
-            cbxEmpleado.SelectedIndex =-1;
-            cbxPaisDeOrigen.SelectedIndex =-1;
-            txtDescripcionObservaciones.Clear();
-        }
-
-        private void CargarDatos()
-        {
-            string sql = @" 
-                            SELECT
-                                id_compra,
-                                em.nombre AS Empleado,
-                                fechaRegistro, 
-                                paisOrigen, 
-                                observaciones,
-                                c.nombreTipo, 
-                                ma.nombreMarca AS Marca, 
-                                mo.nombreModelo AS Modelo 
-                            FROM compra c
-                            INNER JOIN marca ma
-                                ON c.id_marca = ma.id_marca
-                            INNER JOIN modelo mo
-                                ON c.id_modelo = mo.id_modelo
-                            INNER JOIN empleado em
-                                ON c.id_empleado = em.id_empleado
-                          ";
-            dgvCompras.DataSource = con.Consultar(sql);
-            dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
+        
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -125,6 +164,11 @@ namespace SistemaCVR
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Filtrar(txtBuscar.Text.Trim());
         }
     }
 }

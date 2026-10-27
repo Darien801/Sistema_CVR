@@ -68,6 +68,50 @@ namespace SistemaCVR
             dgvVehiculos.DataSource = con.Consultar(sql);
         }
 
+
+        private void Filtrar(string filtrar)
+        {
+            string sql = @"
+                             SELECT
+                                v.id_vehiculo,
+                                mo.nombreModelo AS Modelo,
+                                ma.nombreMarca AS Marca,
+                                placa AS Placa,
+                                chasis AS Chasis,
+                                numeroMotor AS 'Numero de Motor',
+                                precioCompra as 'Precio de Compra',
+                                es.nombreEstado as Estado,
+                                ruta_imagen AS Ruta,
+                                anio AS Año,
+                                color AS Color 
+                            FROM vehiculo v
+                            INNER JOIN modelo mo
+                                ON v.id_modelo = mo.id_modelo
+                            INNER JOIN marca ma
+                                ON v.id_marca = ma.id_marca
+                            LEFT JOIN estado es
+                                ON v.id_estado = es.id_estado
+                            WHERE
+                                v.id_vehiculo LIKE @filtro OR
+                                es.nombreEstado LIKE @filtro OR
+                                placa LIKE @filtro OR
+                                chasis LIKE @filtro OR
+                                numeroMotor LIKE @filtro OR
+                                ma.nombreMarca LIKE @filtro OR
+                                mo.nombreModelo LIKE @filtro
+                            ORDER BY v.id_vehiculo DESC
+                         ";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@filtro", $"%{filtrar.Trim()}%" )
+            };
+
+            dgvVehiculos.DataSource = con.FiltrarDatos(sql, parametros);
+
+        }
+
+
         private void FrmVehiculos_Load(object sender, EventArgs e)
         {
             con.CargarCombos(
@@ -82,7 +126,7 @@ namespace SistemaCVR
             CargarDatos();
 
 
-            for (int a = DateTime.Now.Year + 1; a >= 1990; a--)
+            for (int a = DateTime.Now.Year + 1; a >= 2000; a--)
                 cbxAnio.Items.Add(a);
         }
 
@@ -142,30 +186,31 @@ namespace SistemaCVR
             }
 
             string sql = @"
-        UPDATE vehiculo
-        SET placa        = @placa,
-            chasis       = @chasis,
-            numeroMotor  = @motor,
-            precioCompra = @precio,
-            id_estado    = @estado,
-            anio         = @anio,
-            color        = @color
-        WHERE id_vehiculo = @id";
+                            UPDATE vehiculo
+                            SET placa        = @placa,
+                                chasis       = @chasis,
+                                numeroMotor  = @motor,
+                                precioCompra = @precio,
+                                id_estado    = @estado,
+                                anio         = @anio,
+                                color        = @color
+                            WHERE id_vehiculo = @id
+                         ";
 
             SqlParameter[] parametros =
             {
-        new SqlParameter("@placa",  ValorONulo(txtMostrarPlaca.Text)),
-        new SqlParameter("@chasis", ValorONulo(txtMostrarChasis.Text)),
-        new SqlParameter("@motor",  ValorONulo(txtMostrarMotor.Text)),
-        new SqlParameter("@precio", precio),
-        new SqlParameter("@estado", cbxEstado.SelectedIndex == -1
-            ? (object)DBNull.Value : cbxEstado.SelectedValue),
-        new SqlParameter("@anio",   cbxAnio.SelectedIndex == -1
-            ? (object)DBNull.Value : Convert.ToInt32(cbxAnio.SelectedItem)),
-        new SqlParameter("@color",  cbxColor.SelectedIndex == -1
-            ? (object)DBNull.Value : cbxColor.Text),
-        new SqlParameter("@id",     id_vehiculo)
-    };
+                new SqlParameter("@placa",  ValorONulo(txtMostrarPlaca.Text)),
+                new SqlParameter("@chasis", ValorONulo(txtMostrarChasis.Text)),
+                new SqlParameter("@motor",  ValorONulo(txtMostrarMotor.Text)),
+                new SqlParameter("@precio", precio),
+                new SqlParameter("@estado", cbxEstado.SelectedIndex == -1
+                    ? (object)DBNull.Value : cbxEstado.SelectedValue),
+                new SqlParameter("@anio",   cbxAnio.SelectedIndex == -1
+                    ? (object)DBNull.Value : Convert.ToInt32(cbxAnio.SelectedItem)),
+                new SqlParameter("@color",  cbxColor.SelectedIndex == -1
+                    ? (object)DBNull.Value : cbxColor.Text),
+                new SqlParameter("@id",     id_vehiculo)
+            };
 
             try
             {
@@ -184,6 +229,11 @@ namespace SistemaCVR
             {
                 MessageBox.Show("No se pudo actualizar el vehículo: " + ex.Message);
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            Filtrar(txtBuscar.Text.Trim());
         }
     }
 }
