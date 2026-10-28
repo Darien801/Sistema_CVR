@@ -75,7 +75,7 @@
             this.lblEslogan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEslogan.Location = new System.Drawing.Point(19, 335);
             this.lblEslogan.Name = "lblEslogan";
-            this.lblEslogan.Size = new System.Drawing.Size(296, 114);
+            this.lblEslogan.Size = new System.Drawing.Size(229, 90);
             this.lblEslogan.TabIndex = 5;
             this.lblEslogan.Text = "Controla tus autos\r\nAdministra tus ventas. \r\nGestiona tus rentas.";
             // 
@@ -86,7 +86,7 @@
             this.lblLogo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblLogo.Location = new System.Drawing.Point(12, 9);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(175, 76);
+            this.lblLogo.Size = new System.Drawing.Size(143, 62);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "SCVR";
             // 
@@ -96,7 +96,7 @@
             this.lblNombreSistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNombreSistema.Location = new System.Drawing.Point(22, 100);
             this.lblNombreSistema.Name = "lblNombreSistema";
-            this.lblNombreSistema.Size = new System.Drawing.Size(337, 23);
+            this.lblNombreSistema.Size = new System.Drawing.Size(271, 19);
             this.lblNombreSistema.TabIndex = 1;
             this.lblNombreSistema.Text = "Sistema de Gestion Compra, Venta y Renta";
             // 
@@ -127,7 +127,7 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(350, 45);
             this.btnIngresar.TabIndex = 9;
-            this.btnIngresar.Text = "INICIAR SECIÓN";
+            this.btnIngresar.Text = "INICIAR SESIÓN";
             this.btnIngresar.UseVisualStyleBackColor = false;
             // 
             // chkMostrarContraseña
@@ -136,7 +136,7 @@
             this.chkMostrarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMostrarContraseña.Location = new System.Drawing.Point(111, 398);
             this.chkMostrarContraseña.Name = "chkMostrarContraseña";
-            this.chkMostrarContraseña.Size = new System.Drawing.Size(160, 24);
+            this.chkMostrarContraseña.Size = new System.Drawing.Size(130, 19);
             this.chkMostrarContraseña.TabIndex = 8;
             this.chkMostrarContraseña.Text = "Mostrar Contraseña";
             this.chkMostrarContraseña.UseVisualStyleBackColor = true;
@@ -149,7 +149,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(111, 340);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(401, 34);
+            this.txtContraseña.Size = new System.Drawing.Size(401, 29);
             this.txtContraseña.TabIndex = 7;
             // 
             // txtUsuario
@@ -160,7 +160,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(111, 236);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(401, 34);
+            this.txtUsuario.Size = new System.Drawing.Size(401, 29);
             this.txtUsuario.TabIndex = 6;
             // 
             // lblTitulo
@@ -170,7 +170,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblTitulo.Location = new System.Drawing.Point(101, 33);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(247, 57);
+            this.lblTitulo.Size = new System.Drawing.Size(200, 46);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Bienvenido";
             // 
@@ -181,7 +181,7 @@
             this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblContraseña.Location = new System.Drawing.Point(107, 298);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(118, 28);
+            this.lblContraseña.Size = new System.Drawing.Size(96, 21);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña";
             // 
@@ -192,7 +192,7 @@
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblUsuario.Location = new System.Drawing.Point(107, 190);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(84, 28);
+            this.lblUsuario.Size = new System.Drawing.Size(69, 21);
             this.lblUsuario.TabIndex = 3;
             this.lblUsuario.Text = "Usuario";
             // 
@@ -201,13 +201,13 @@
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Location = new System.Drawing.Point(107, 110);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(309, 23);
+            this.lblSubtitulo.Size = new System.Drawing.Size(247, 19);
             this.lblSubtitulo.TabIndex = 2;
             this.lblSubtitulo.Text = "Ingrese tus credenciales para continuar";
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(982, 623);

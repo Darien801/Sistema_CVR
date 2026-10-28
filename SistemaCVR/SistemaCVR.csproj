@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsConexion.cs" />
+    <Compile Include="FrmAsignacionEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAsignacionEquipo.Designer.cs">
+      <DependentUpon>FrmAsignacionEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCaracteristicas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,14 +101,35 @@
     <Compile Include="FrmCompras.Designer.cs">
       <DependentUpon>FrmCompras.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRentas.Designer.cs">
+      <DependentUpon>FrmRentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmVehiculos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmVehiculos.Designer.cs">
       <DependentUpon>FrmVehiculos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVentas.Designer.cs">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAsignacionEquipo.resx">
+      <DependentUpon>FrmAsignacionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCaracteristicas.resx">
       <DependentUpon>FrmCaracteristicas.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +155,17 @@
     <EmbeddedResource Include="FrmCompras.resx">
       <DependentUpon>FrmCompras.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRentas.resx">
+      <DependentUpon>FrmRentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmVehiculos.resx">
       <DependentUpon>FrmVehiculos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVentas.resx">
+      <DependentUpon>FrmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
