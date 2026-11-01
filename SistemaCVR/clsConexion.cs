@@ -71,14 +71,5 @@ namespace SistemaCVR
             combo.ValueMember = valor;
             combo.SelectedIndex = 0;
         }
-
-
-
-
-
-
-
-
-
     }
 }

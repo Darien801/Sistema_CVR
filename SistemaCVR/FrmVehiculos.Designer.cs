@@ -45,14 +45,14 @@
             this.txtPrecioCompra = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtMostrarMotor = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMostrarModelo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMostrarChasis = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMostrarPlaca = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtMostrarModelo = new System.Windows.Forms.TextBox();
             this.txtMostrarMarca = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -74,7 +74,7 @@
             // dgvVehiculos
             // 
             this.dgvVehiculos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVehiculos.Location = new System.Drawing.Point(955, 213);
+            this.dgvVehiculos.Location = new System.Drawing.Point(647, 190);
             this.dgvVehiculos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvVehiculos.Name = "dgvVehiculos";
             this.dgvVehiculos.RowHeadersWidth = 51;
@@ -124,7 +124,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEditar.Location = new System.Drawing.Point(1584, 128);
+            this.btnEditar.Location = new System.Drawing.Point(1117, 116);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(170, 39);
@@ -144,14 +144,14 @@
             this.groupBox1.Controls.Add(this.txtPrecioCompra);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtMostrarMotor);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtMostrarModelo);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtMostrarChasis);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.txtMostrarPlaca);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtMostrarModelo);
             this.groupBox1.Controls.Add(this.txtMostrarMarca);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
@@ -159,7 +159,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(913, 734);
+            this.groupBox1.Size = new System.Drawing.Size(563, 734);
             this.groupBox1.TabIndex = 49;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del vehiculo";
@@ -167,7 +167,7 @@
             // cbxAnio
             // 
             this.cbxAnio.FormattingEnabled = true;
-            this.cbxAnio.Location = new System.Drawing.Point(586, 207);
+            this.cbxAnio.Location = new System.Drawing.Point(244, 490);
             this.cbxAnio.Name = "cbxAnio";
             this.cbxAnio.Size = new System.Drawing.Size(216, 36);
             this.cbxAnio.TabIndex = 18;
@@ -191,7 +191,7 @@
             "Vino",
             "Celeste",
             "Otro"});
-            this.cbxColor.Location = new System.Drawing.Point(586, 275);
+            this.cbxColor.Location = new System.Drawing.Point(244, 550);
             this.cbxColor.Name = "cbxColor";
             this.cbxColor.Size = new System.Drawing.Size(216, 36);
             this.cbxColor.TabIndex = 17;
@@ -199,7 +199,7 @@
             // cbxEstado
             // 
             this.cbxEstado.FormattingEnabled = true;
-            this.cbxEstado.Location = new System.Drawing.Point(586, 142);
+            this.cbxEstado.Location = new System.Drawing.Point(244, 430);
             this.cbxEstado.Name = "cbxEstado";
             this.cbxEstado.Size = new System.Drawing.Size(216, 36);
             this.cbxEstado.TabIndex = 15;
@@ -207,7 +207,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(479, 279);
+            this.label10.Location = new System.Drawing.Point(18, 550);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 28);
             this.label10.TabIndex = 14;
@@ -216,7 +216,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(479, 210);
+            this.label9.Location = new System.Drawing.Point(18, 490);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 28);
             this.label9.TabIndex = 13;
@@ -225,7 +225,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(479, 145);
+            this.label8.Location = new System.Drawing.Point(18, 430);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 28);
             this.label8.TabIndex = 12;
@@ -234,7 +234,7 @@
             // txtPrecioCompra
             // 
             this.txtPrecioCompra.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrecioCompra.Location = new System.Drawing.Point(222, 349);
+            this.txtPrecioCompra.Location = new System.Drawing.Point(244, 370);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(216, 34);
             this.txtPrecioCompra.TabIndex = 11;
@@ -242,7 +242,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 351);
+            this.label7.Location = new System.Drawing.Point(18, 370);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(177, 28);
             this.label7.TabIndex = 10;
@@ -251,15 +251,33 @@
             // txtMostrarMotor
             // 
             this.txtMostrarMotor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMostrarMotor.Location = new System.Drawing.Point(222, 277);
+            this.txtMostrarMotor.Location = new System.Drawing.Point(244, 310);
             this.txtMostrarMotor.Name = "txtMostrarMotor";
             this.txtMostrarMotor.Size = new System.Drawing.Size(216, 34);
             this.txtMostrarMotor.TabIndex = 9;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(18, 130);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 28);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Modelo";
+            // 
+            // txtMostrarModelo
+            // 
+            this.txtMostrarModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMostrarModelo.Enabled = false;
+            this.txtMostrarModelo.Location = new System.Drawing.Point(244, 130);
+            this.txtMostrarModelo.Name = "txtMostrarModelo";
+            this.txtMostrarModelo.Size = new System.Drawing.Size(216, 34);
+            this.txtMostrarModelo.TabIndex = 3;
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 279);
+            this.label6.Location = new System.Drawing.Point(18, 310);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 28);
             this.label6.TabIndex = 8;
@@ -268,7 +286,7 @@
             // txtMostrarChasis
             // 
             this.txtMostrarChasis.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMostrarChasis.Location = new System.Drawing.Point(222, 204);
+            this.txtMostrarChasis.Location = new System.Drawing.Point(244, 250);
             this.txtMostrarChasis.Name = "txtMostrarChasis";
             this.txtMostrarChasis.Size = new System.Drawing.Size(216, 34);
             this.txtMostrarChasis.TabIndex = 7;
@@ -276,7 +294,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 210);
+            this.label5.Location = new System.Drawing.Point(18, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(183, 28);
             this.label5.TabIndex = 6;
@@ -285,7 +303,7 @@
             // txtMostrarPlaca
             // 
             this.txtMostrarPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMostrarPlaca.Location = new System.Drawing.Point(222, 140);
+            this.txtMostrarPlaca.Location = new System.Drawing.Point(244, 190);
             this.txtMostrarPlaca.Name = "txtMostrarPlaca";
             this.txtMostrarPlaca.Size = new System.Drawing.Size(216, 34);
             this.txtMostrarPlaca.TabIndex = 5;
@@ -293,43 +311,25 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 142);
+            this.label3.Location = new System.Drawing.Point(18, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 28);
             this.label3.TabIndex = 4;
             this.label3.Text = "Placa";
             // 
-            // txtMostrarModelo
-            // 
-            this.txtMostrarModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMostrarModelo.Enabled = false;
-            this.txtMostrarModelo.Location = new System.Drawing.Point(586, 68);
-            this.txtMostrarModelo.Name = "txtMostrarModelo";
-            this.txtMostrarModelo.Size = new System.Drawing.Size(216, 34);
-            this.txtMostrarModelo.TabIndex = 3;
-            // 
             // txtMostrarMarca
             // 
             this.txtMostrarMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMostrarMarca.Enabled = false;
-            this.txtMostrarMarca.Location = new System.Drawing.Point(222, 71);
+            this.txtMostrarMarca.Location = new System.Drawing.Point(244, 70);
             this.txtMostrarMarca.Name = "txtMostrarMarca";
             this.txtMostrarMarca.Size = new System.Drawing.Size(216, 34);
             this.txtMostrarMarca.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(479, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 28);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Modelo";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 71);
+            this.label1.Location = new System.Drawing.Point(15, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 28);
             this.label1.TabIndex = 0;
@@ -339,7 +339,7 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(1035, 133);
+            this.txtBuscar.Location = new System.Drawing.Point(647, 119);
             this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(359, 34);
@@ -351,7 +351,7 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(1401, 133);
+            this.btnBuscar.Location = new System.Drawing.Point(1013, 119);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(56, 34);
@@ -362,7 +362,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1912, 953);
+            this.ClientSize = new System.Drawing.Size(1722, 953);
             this.ControlBox = false;
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.btnBuscar);

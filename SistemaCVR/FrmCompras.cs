@@ -55,6 +55,11 @@ namespace SistemaCVR
 
         private void Filtrar( string filtrar)
         {
+            if (string.IsNullOrWhiteSpace(filtrar))
+            {
+                CargarDatos();
+                return;
+            }
             string sql = @"
                              SELECT
                                 id_compra,
@@ -114,6 +119,7 @@ namespace SistemaCVR
                 );
 
             CargarDatos();
+            LimpiarCampos();
         }
 
 
@@ -124,8 +130,8 @@ namespace SistemaCVR
             if (cbxEmpleado.SelectedValue == null ||
                cbxMarca.SelectedValue == null ||
                cbxModelo.SelectedValue == null ||
-               string.IsNullOrWhiteSpace(cbxPaisDeOrigen.Text) ||
-               string.IsNullOrWhiteSpace(cbxTipo.Text))
+               cbxPaisDeOrigen.SelectedValue == null ||
+               cbxTipo.SelectedValue == null)
             {
                 MessageBox.Show("Debe completar todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -149,10 +155,26 @@ namespace SistemaCVR
 
             try
             {
-                con.ejecutarComando(sql, parametros);
-                CargarDatos();
-                LimpiarCampos();
-                MessageBox.Show("Compra registrada. El vehículo se agregó al inventario.");
+                int afectadas = con.ejecutarComando(sql, parametros);
+
+                if (afectadas > 0)
+                {
+                    CargarDatos();
+                    LimpiarCampos();
+
+                    MessageBox.Show(
+                        "Compra registrada correctamente.",
+                        "Registro exitoso",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo registrar la compra.", "aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
             }
             catch (Exception ex)
             {

@@ -20,7 +20,7 @@ namespace SistemaCVR
         public FrmAsignacionEquipo(int idRenta)
         {
             InitializeComponent();
-            this.idRenta = idRenta;
+            this.idRenta = idRenta; 
         }
 
         private void CargarDatos()
@@ -63,7 +63,13 @@ namespace SistemaCVR
                             WHERE r.id_renta = @id_renta;
                           ";
 
-                DataTable renta = con.FiltrarDatos(sqlRenta, new SqlParameter[] { new SqlParameter("@id_renta", idRenta) });
+                SqlParameter[] parametros =
+                {
+                    new SqlParameter("@id_renta", idRenta)
+                };
+                    
+
+                DataTable renta = con.FiltrarDatos(sqlRenta, parametros);
                 if (renta.Rows.Count == 0)
                 {
                     MessageBox.Show("No se encontró la renta seleccionada.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);

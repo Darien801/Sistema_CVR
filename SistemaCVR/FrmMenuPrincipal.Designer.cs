@@ -116,6 +116,7 @@
             this.btnReportes.TabIndex = 5;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = false;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnRentas
             // 
@@ -131,6 +132,7 @@
             this.btnRentas.TabIndex = 4;
             this.btnRentas.Text = "Rentas";
             this.btnRentas.UseVisualStyleBackColor = false;
+            this.btnRentas.Click += new System.EventHandler(this.btnRentas_Click);
             // 
             // btnVentas
             // 
@@ -146,6 +148,7 @@
             this.btnVentas.TabIndex = 3;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
+            this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
             // btnCompras
             // 
@@ -161,6 +164,7 @@
             this.btnCompras.TabIndex = 2;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = false;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVehiculos
             // 
@@ -176,6 +180,7 @@
             this.btnVehiculos.TabIndex = 1;
             this.btnVehiculos.Text = "Vehículos";
             this.btnVehiculos.UseVisualStyleBackColor = false;
+            this.btnVehiculos.Click += new System.EventHandler(this.btnVehiculos_Click);
             // 
             // btnClientes
             // 
@@ -191,6 +196,7 @@
             this.btnClientes.TabIndex = 0;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // pnlContenido
             // 

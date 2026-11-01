@@ -209,6 +209,7 @@
             this.txtDescripcionObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcionObservaciones.Location = new System.Drawing.Point(13, 414);
             this.txtDescripcionObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDescripcionObservaciones.MaxLength = 500;
             this.txtDescripcionObservaciones.Multiline = true;
             this.txtDescripcionObservaciones.Name = "txtDescripcionObservaciones";
             this.txtDescripcionObservaciones.Size = new System.Drawing.Size(685, 167);
@@ -285,7 +286,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEditar.Location = new System.Drawing.Point(811, 20);
+            this.btnEditar.Location = new System.Drawing.Point(718, 43);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(101, 39);

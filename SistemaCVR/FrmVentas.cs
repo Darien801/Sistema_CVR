@@ -16,8 +16,9 @@ namespace SistemaCVR
     {
         private readonly clsConexion con = new clsConexion();
 
-        // Consulta base del historial; Filtrar() solo le agrega el WHERE.
-        private const string sqlHistorial = @"
+        private void CargarDatos(string filtrar)
+        {
+                string sql = @"
                             SELECT
                                 vt.id_venta,
                                 c.nombre + N' ' + c.apellido AS Cliente,
@@ -37,28 +38,49 @@ namespace SistemaCVR
                             INNER JOIN modelo mo
                                 ON v.id_modelo = mo.id_modelo
                             INNER JOIN empleado em
-                                ON vt.id_empleado = em.id_empleado
+                                ON vt.id_empleado = em.id_empleado          
+                            WHERE
+                                CAST(vt.id_venta AS nvarchar(10)) LIKE @filtro OR
+                                c.nombre LIKE @filtro OR
+                                c.apellido LIKE @filtro OR
+                                c.DUI LIKE @filtro OR
+                                ma.nombreMarca LIKE @filtro OR
+                                mo.nombreModelo LIKE @filtro OR
+                                v.placa LIKE @filtro OR
+                                em.nombre LIKE @filtro OR
+                                em.apellido LIKE @filtro OR
+                                vt.estadoVenta LIKE @filtro OR
+                                vt.observaciones LIKE @filtro OR
+                                CONVERT(nvarchar(10), vt.fecha, 103) LIKE @filtro
+                            ORDER BY vt.fecha DESC, vt.id_venta DESC
                           ";
 
-        private const string sqlOrden = " ORDER BY vt.fecha DESC, vt.id_venta DESC;";
+                SqlParameter[] parametros =
+                {
+                    new SqlParameter("@filtro", $"%{filtrar.Trim()}%")
+                };
 
-        public FrmVentas()
-        {
-            InitializeComponent();
+                dgvVentas.DataSource = con.FiltrarDatos(sql, parametros);
+                dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        // clsConexion.CargarCombos fuerza Selected
-        private void CargarCombo(ComboBox combo, string sql, string visible, string valor)
+        private void CargarCombosPadre()
         {
-            combo.DisplayMember = visible;
-            combo.ValueMember = valor;
-            combo.DataSource = con.Consultar(sql);
-            combo.SelectedIndex = -1;
-        }
+            con.CargarCombos(
+                cmbCliente,
+                "SELECT id_cliente, nombre + N' ' + apellido + N' - ' + DUI AS cliente FROM cliente ORDER BY 2",
+                "cliente",
+                "id_cliente"
+                );
 
-        private void CargarVehiculos()
-        {
-            CargarCombo(
+            con.CargarCombos(
+                cmbEmpleado,
+                "SELECT id_empleado, nombre + N' ' + apellido AS empleado FROM empleado WHERE estadoEmpleado = N'Activo' ORDER BY 2",
+                "empleado",
+                "id_empleado"
+                );
+
+            con.CargarCombos(
                 cmbVehiculo,
                 @"SELECT
                       v.id_vehiculo,
@@ -73,57 +95,7 @@ namespace SistemaCVR
                 "descripcion",
                 "id_vehiculo"
                 );
-        }
 
-        private void CargarCombos()
-        {
-            CargarCombo(
-                cmbCliente,
-                "SELECT id_cliente, nombre + N' ' + apellido + N' - ' + DUI AS cliente FROM cliente ORDER BY 2",
-                "cliente",
-                "id_cliente"
-                );
-
-            CargarCombo(
-                cmbEmpleado,
-                "SELECT id_empleado, nombre + N' ' + apellido AS empleado FROM empleado WHERE estadoEmpleado = N'Activo' ORDER BY 2",
-                "empleado",
-                "id_empleado"
-                );
-
-            CargarVehiculos();
-        }
-
-        private void CargarDatos()
-        {
-            dgvVentas.DataSource = con.Consultar(sqlHistorial + sqlOrden);
-            dgvVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-
-        private void Filtrar(string filtrar)
-        {
-            string sql = sqlHistorial + @"
-                            WHERE
-                                CAST(vt.id_venta AS nvarchar(10)) LIKE @filtro OR
-                                c.nombre LIKE @filtro OR
-                                c.apellido LIKE @filtro OR
-                                c.DUI LIKE @filtro OR
-                                ma.nombreMarca LIKE @filtro OR
-                                mo.nombreModelo LIKE @filtro OR
-                                v.placa LIKE @filtro OR
-                                em.nombre LIKE @filtro OR
-                                em.apellido LIKE @filtro OR
-                                vt.estadoVenta LIKE @filtro OR
-                                vt.observaciones LIKE @filtro OR
-                                CONVERT(nvarchar(10), vt.fecha, 103) LIKE @filtro
-                          " + sqlOrden;
-
-            SqlParameter[] parametros =
-            {
-                new SqlParameter("@filtro", $"%{filtrar.Trim()}%")
-            };
-
-            dgvVentas.DataSource = con.FiltrarDatos(sql, parametros);
         }
 
         private void LimpiarCampos()
@@ -138,19 +110,29 @@ namespace SistemaCVR
             cmbCliente.Focus();
         }
 
+        
+
+        public FrmVentas()
+        {
+            InitializeComponent();
+        }
+
+        
+
         private void FrmVentas_Load(object sender, EventArgs e)
         {
             try
             {
-                CargarCombos();
-                CargarDatos();
-                cmbEstadoVenta.SelectedIndex = 0;
+                CargarCombosPadre();
+                CargarDatos(txtBuscar.Text);
+                LimpiarCampos();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudieron cargar los datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -237,14 +219,13 @@ namespace SistemaCVR
                 if (afectadas > 0)
                 {
                     MessageBox.Show("Venta registrada correctamente.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    CargarDatos();
-                    CargarVehiculos();
+                    CargarCombosPadre();
+                    CargarDatos(txtBuscar.Text);
                     LimpiarCampos();
                 }
                 else
                 {
-                    MessageBox.Show("El vehículo seleccionado ya no está disponible. Se actualizó la lista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    CargarVehiculos();
+                    MessageBox.Show("La venta no se pudo registrar correctamente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
@@ -267,7 +248,7 @@ namespace SistemaCVR
         {
             try
             {
-                Filtrar(txtBuscar.Text);
+                CargarDatos(txtBuscar.Text);
             }
             catch (Exception ex)
             {

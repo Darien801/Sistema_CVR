@@ -17,9 +17,58 @@ namespace SistemaCVR
         private readonly clsConexion con = new clsConexion();
         private bool soloActivas = false;
 
-        // Consulta base del historial; CargarDatos() le agrega el WHERE.
-        private const string sqlHistorial = @"
-                            SELECT
+        public FrmRentas()
+        {
+            InitializeComponent();
+        } 
+        // ------------------------
+        // METODOS
+        // -----------------------
+        private void CargarCombosPadre()
+        {
+            con.CargarCombos(
+                cmbCliente,
+                "SELECT id_cliente, nombre + N' ' + apellido + N' - ' + DUI AS cliente FROM cliente ORDER BY 2",
+                "cliente",
+                "id_cliente"
+             );
+
+            con.CargarCombos(
+                cmbEmpleado,
+                "SELECT id_empleado, nombre + N' ' + apellido AS empleado FROM empleado WHERE estadoEmpleado = N'Activo' ORDER BY 2",
+                "empleado",
+                "id_empleado"
+             );
+
+            CargarComboVehiculos();
+        }
+
+        private void CargarComboVehiculos()
+        {
+            con.CargarCombos(
+                cmbVehiculo,
+                @"SELECT
+                      v.id_vehiculo,
+                      ISNULL(v.placa, N'S/P') + N' - ' + ma.nombreMarca + N' ' + mo.nombreModelo
+                          + ISNULL(N' ' + CAST(v.anio AS nvarchar(4)), N'') AS descripcion
+                  FROM vehiculo v
+                  INNER JOIN marca ma ON v.id_marca = ma.id_marca
+                  INNER JOIN modelo mo ON v.id_modelo = mo.id_modelo
+                  INNER JOIN estado es ON v.id_estado = es.id_estado
+                  WHERE v.id_estado = 1
+                  ORDER BY 2",
+                "descripcion",
+                "id_vehiculo"
+                );
+        }
+
+        
+
+        // Carga el historial aplicando el texto de búsqueda y el filtro "Rentas activas".
+        private void CargarDatos()
+        {
+            string sql = @"
+                             SELECT
                                 r.id_renta,
                                 c.nombre + N' ' + c.apellido AS Cliente,
                                 ma.nombreMarca + N' ' + mo.nombreModelo + N' (' + ISNULL(v.placa, N'S/P') + N')' AS Vehiculo,
@@ -41,66 +90,6 @@ namespace SistemaCVR
                                 ON v.id_modelo = mo.id_modelo
                             INNER JOIN empleado em
                                 ON r.id_empleado = em.id_empleado
-                          ";
-
-        private const string sqlOrden = " ORDER BY r.fecha_inicio DESC, r.id_renta DESC;";
-
-        public FrmRentas()
-        {
-            InitializeComponent();
-        }
-
-        // clsConexion.CargarCombos falla si la lista viene vacía (SelectedIndex = 0), por eso se usa este método local.
-        private void CargarCombo(ComboBox combo, string sql, string visible, string valor)
-        {
-            combo.DisplayMember = visible;
-            combo.ValueMember = valor;
-            combo.DataSource = con.Consultar(sql);
-            combo.SelectedIndex = -1;
-        }
-
-        private void CargarVehiculos()
-        {
-            CargarCombo(
-                cmbVehiculo,
-                @"SELECT
-                      v.id_vehiculo,
-                      ISNULL(v.placa, N'S/P') + N' - ' + ma.nombreMarca + N' ' + mo.nombreModelo
-                          + ISNULL(N' ' + CAST(v.anio AS nvarchar(4)), N'') AS descripcion
-                  FROM vehiculo v
-                  INNER JOIN marca ma ON v.id_marca = ma.id_marca
-                  INNER JOIN modelo mo ON v.id_modelo = mo.id_modelo
-                  INNER JOIN estado es ON v.id_estado = es.id_estado
-                  WHERE es.nombreEstado = N'Disponible'
-                  ORDER BY 2",
-                "descripcion",
-                "id_vehiculo"
-                );
-        }
-
-        private void CargarCombos()
-        {
-            CargarCombo(
-                cmbCliente,
-                "SELECT id_cliente, nombre + N' ' + apellido + N' - ' + DUI AS cliente FROM cliente ORDER BY 2",
-                "cliente",
-                "id_cliente"
-                );
-
-            CargarCombo(
-                cmbEmpleado,
-                "SELECT id_empleado, nombre + N' ' + apellido AS empleado FROM empleado WHERE estadoEmpleado = N'Activo' ORDER BY 2",
-                "empleado",
-                "id_empleado"
-                );
-
-            CargarVehiculos();
-        }
-
-        // Carga el historial aplicando el texto de búsqueda y el filtro "Rentas activas".
-        private void CargarDatos()
-        {
-            string sql = sqlHistorial + @"
                             WHERE
                                 (@soloActivas = 0 OR r.estadoRenta = N'Activa') AND
                                 (
@@ -117,7 +106,8 @@ namespace SistemaCVR
                                     r.observaciones LIKE @filtro OR
                                     CONVERT(nvarchar(10), r.fecha_inicio, 103) LIKE @filtro
                                 )
-                          " + sqlOrden;
+                            ORDER BY r.fecha_inicio DESC, r.id_renta DESC
+                          ";
 
             SqlParameter[] parametros =
             {
@@ -128,7 +118,7 @@ namespace SistemaCVR
             dgvRentas.DataSource = con.FiltrarDatos(sql, parametros);
             dgvRentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
+                
         // Quita los segundos (el selector solo muestra hasta los minutos).
         private DateTime Minuto(DateTime valor)
         {
@@ -156,11 +146,14 @@ namespace SistemaCVR
             cmbCliente.Focus();
         }
 
+        // ---------
+        // EVENTO LOAD
+        // ---------
         private void FrmRentas_Load(object sender, EventArgs e)
         {
             try
             {
-                CargarCombos();
+                CargarCombosPadre();
                 CargarDatos();
                 LimpiarCampos();
             }
@@ -249,13 +242,13 @@ namespace SistemaCVR
                 {
                     MessageBox.Show("Renta registrada correctamente. Puede asignar equipo seleccionándola en la tabla.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDatos();
-                    CargarVehiculos();
+                    CargarComboVehiculos();
                     LimpiarCampos();
                 }
                 else
                 {
                     MessageBox.Show("El vehículo seleccionado ya no está disponible. Se actualizó la lista.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    CargarVehiculos();
+                    CargarComboVehiculos();
                 }
             }
             catch (Exception ex)
@@ -290,6 +283,12 @@ namespace SistemaCVR
                 MessageBox.Show("No se pudo abrir la asignación de equipo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
+
+
+
+
 
         private void btnDevolver_Click(object sender, EventArgs e)
         {
@@ -339,7 +338,7 @@ namespace SistemaCVR
                 {
                     MessageBox.Show("Devolución registrada. El vehículo está disponible nuevamente.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     CargarDatos();
-                    CargarVehiculos();
+                    CargarComboVehiculos();
                 }
                 else
                 {

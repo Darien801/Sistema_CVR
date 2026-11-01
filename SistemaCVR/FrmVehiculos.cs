@@ -38,6 +38,7 @@ namespace SistemaCVR
             cbxEstado.SelectedIndex = -1;
             cbxAnio.SelectedIndex = -1;
             cbxColor.SelectedIndex = -1;
+            cbxEstado.SelectedIndex = -1;
         }
 
         private void CargarDatos()
@@ -121,13 +122,15 @@ namespace SistemaCVR
                 "id_estado"
              );
 
-            
-
             CargarDatos();
+            LimpiarCampos();
 
 
             for (int a = DateTime.Now.Year + 1; a >= 2000; a--)
+            {
                 cbxAnio.Items.Add(a);
+            }
+                
         }
 
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -149,8 +152,7 @@ namespace SistemaCVR
             txtPrecioCompra.Text = fila.Cells[6].Value.ToString();
 
 
-            cbxEstado.SelectedIndex = cbxEstado.FindStringExact(
-            Convert.ToString(fila.Cells[7].Value));
+            cbxEstado.SelectedIndex = cbxEstado.FindStringExact(Convert.ToString(fila.Cells[7].Value));
 
             object anio = fila.Cells[9].Value;
             cbxAnio.SelectedIndex = (anio == null || anio == DBNull.Value)
@@ -214,11 +216,20 @@ namespace SistemaCVR
 
             try
             {
-                con.ejecutarComando(sql, parametros);
-                CargarDatos();
-                LimpiarCampos();
-                MessageBox.Show("Vehículo actualizado correctamente.", "Éxito",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                int afecetadas = con.ejecutarComando(sql, parametros);
+                if (afecetadas > 0)
+                {
+                    CargarDatos();
+                    LimpiarCampos();
+                    MessageBox.Show("Vehículo actualizado correctamente.", "Éxito",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("El vehiculo no se pudo actualizar.", "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
             catch (SqlException ex) when (ex.Number == 2601 || ex.Number == 2627)
             {

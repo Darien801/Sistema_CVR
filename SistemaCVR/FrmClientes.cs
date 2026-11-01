@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace SistemaCVR
 {
@@ -31,6 +32,11 @@ namespace SistemaCVR
 
         private void Filtrar(string filtrar)
         {
+            if (string.IsNullOrWhiteSpace(filtrar))
+            {
+                CargarDatos();
+                return;
+            }
             string sql = @" SELECT 
                                 id_cliente,
                                 nombre,
@@ -65,9 +71,25 @@ namespace SistemaCVR
             idseleccionado = 0;
         }
 
+        private bool validarNombreApellido(string nombreApeliido)
+        {
+            return Regex.IsMatch(nombreApeliido, @"^[\p{L}\s'-]+$");
+        }
+        private bool validarDui(string dui)
+        {
+            return Regex.IsMatch(dui, @"^\d{8}-\d$");
+        }
+
+        private bool validarTelefono(string telefono)
+        {
+            return Regex.IsMatch(telefono, @"^\d{4}-\d{4}$");
+        }
+
+
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             CargarDatos();
+            LimpiarCampos();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -80,6 +102,41 @@ namespace SistemaCVR
                 )
             {
                 MessageBox.Show("Complete los campos", "Error", MessageBoxButtons.OK , MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (!validarNombreApellido(txtNombreCliente.Text.Trim()) ||
+                !validarNombreApellido(txtApellidoCliente.Text.Trim())     
+                )
+            {
+                MessageBox.Show("El nombre y apellido solo deben contener letras.",
+                                "Datos inválidos",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                                );
+                return;
+            }
+
+            if (!validarDui(txtDuiCliente.Text.Trim()))
+            {
+                MessageBox.Show("El DUI no cumple con el formato correcto.",
+                                "Datos inválidos",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                                );
+                txtDuiCliente.Focus();
+                return;
+            }
+
+            if (!validarTelefono(txtTelefonoCliente.Text.Trim()))
+            {
+                MessageBox.Show("El teléfono debe tener el formato 0000-0000.",
+                                "Teléfono inválido",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                );
+
+                txtTelefonoCliente.Focus();
                 return;
             }
 
@@ -119,9 +176,6 @@ namespace SistemaCVR
                     MessageBoxIcon.Error
                 );
             }
-                
-
-
         }
 
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -198,7 +252,6 @@ namespace SistemaCVR
 
 
         }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (idseleccionado <= 0)
@@ -206,7 +259,6 @@ namespace SistemaCVR
                 MessageBox.Show("Seleccione una fila para editar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-
 
             DialogResult respuesta = MessageBox.Show("¿Desea eliminar a este cliente?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
