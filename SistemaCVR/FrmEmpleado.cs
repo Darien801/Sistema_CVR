@@ -59,33 +59,48 @@ namespace SistemaCVR
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            
+       
             if (string.IsNullOrWhiteSpace(txtNombre.Text) ||
                 string.IsNullOrWhiteSpace(txtApellido.Text) ||
                 string.IsNullOrWhiteSpace(txtDui.Text) ||
                 string.IsNullOrWhiteSpace(txtPass.Text) ||
-                string.IsNullOrWhiteSpace(cbxRol.Text)
-                )
+                string.IsNullOrWhiteSpace(cbxRol.Text))
             {
                 MessageBox.Show("Por favor, complete todos los campos.");
                 return;
             }
 
             string estado = chkEstado.Checked ? "Activo" : "Inactivo";
-            string sql = $"INSERT INTO empleado (nombre, apellido, DUI, hashEmpleado , rolEmpleado, estadoEmpleado) VALUES ('{txtNombre.Text}', '{txtApellido.Text}', '{txtDui.Text}', '{txtPass.Text}', '{cbxRol.Text}', '{estado}')";
 
-            SqlParameter[] parametros = {
-                new SqlParameter("@nombre", txtNombre.Text),
-                new SqlParameter("@apellido", txtApellido.Text),
-                new SqlParameter("@DUI", txtDui.Text),
-                new SqlParameter("@hashEmpleado", txtPass.Text),
-                new SqlParameter("@rolEmpleado", cbxRol.Text),
+            // Convertir la contraseña a MD5
+            string hash = con.GenerarHashMD5(txtPass.Text.Trim());
+
+            string sql = @"
+                            INSERT INTO empleado
+                            (nombre, apellido, DUI, hashEmpleado, rolEmpleado, estadoEmpleado)
+                            VALUES
+                            (@nombre, @apellido, @DUI, @hashEmpleado, @rolEmpleado, @estadoEmpleado)";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@nombre", txtNombre.Text.Trim()),
+                new SqlParameter("@apellido", txtApellido.Text.Trim()),
+                new SqlParameter("@DUI", txtDui.Text.Trim()),
+                new SqlParameter("@hashEmpleado", hash),
+                new SqlParameter("@rolEmpleado", cbxRol.Text.Trim()),
                 new SqlParameter("@estadoEmpleado", estado)
             };
+
             con.ejecutarComando(sql, parametros);
-            MessageBox.Show("Empleado guardado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MessageBox.Show("Empleado guardado correctamente.",
+                "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             mostrarDatos();
             LimpiarCampos();
         }
+        
 
         private void FrmEmpleado_Load(object sender, EventArgs e)
         {
@@ -144,7 +159,9 @@ namespace SistemaCVR
 
             if (actualizarPass)
             {
-                parametros.Add(new SqlParameter("@hashEmpleado", txtPass.Text.Trim()));
+                string hash = con.GenerarHashMD5(txtPass.Text.Trim());
+
+                parametros.Add(new SqlParameter("@hashEmpleado", hash));
             }
 
             con.ejecutarComando(sql, parametros.ToArray());

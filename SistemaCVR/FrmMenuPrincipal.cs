@@ -89,5 +89,10 @@ namespace SistemaCVR
             pnlContenido.Controls.Add(obj);
             obj.Show();
         }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

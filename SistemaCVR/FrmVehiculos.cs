@@ -68,9 +68,9 @@ namespace SistemaCVR
         {
             string sql = @"
                             SELECT
-                                v.id_vehiculo,
-                                mo.nombreModelo AS Modelo,
+                                v.id_vehiculo AS ID,                              
                                 ma.nombreMarca AS Marca,
+                                mo.nombreModelo AS Modelo,
                                 placa AS Placa,
                                 chasis AS Chasis,
                                 numeroMotor AS 'Numero de Motor',
@@ -194,7 +194,7 @@ namespace SistemaCVR
 
             DataGridViewRow fila = dgvVehiculos.Rows[e.RowIndex];
 
-            id_vehiculo = Convert.ToInt32(fila.Cells["id_vehiculo"].Value);
+            id_vehiculo = Convert.ToInt32(fila.Cells["ID"].Value);
 
             txtMostrarModelo.Text = fila.Cells["Modelo"].Value?.ToString();
             txtMostrarMarca.Text = fila.Cells["Marca"].Value?.ToString();

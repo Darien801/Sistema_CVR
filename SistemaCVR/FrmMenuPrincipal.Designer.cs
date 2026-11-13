@@ -218,6 +218,7 @@
             this.Name = "FrmMenuPrincipal";
             this.Text = "FrmMenuPrincipal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.pnlMenuLateral.ResumeLayout(false);
             this.pnlMenuLateral.PerformLayout();
             this.ResumeLayout(false);

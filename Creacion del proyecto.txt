@@ -52,17 +52,12 @@ Utilizar nombres descriptivos y mantener una convención uniforme:
 
 
 
-
-
-
-
-
-
-
-
-
-
 El Size del los formularios hijos debe adaptarse a el pnlContenido del FrmPrincipal, por eso el Size máximo de cualquier formulario hijo es de 1740; 1000
 
 
 
+
+Usuarios y Contraseñas
+
+Admin: Andrea Palacios - contraseña
+Vendedor : Carlos Pinto - AAA

@@ -37,11 +37,13 @@
             this.btnIngresar = new System.Windows.Forms.Button();
             this.chkMostrarContraseña = new System.Windows.Forms.CheckBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlMarca.SuspendLayout();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
@@ -75,7 +77,7 @@
             this.lblEslogan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblEslogan.Location = new System.Drawing.Point(19, 335);
             this.lblEslogan.Name = "lblEslogan";
-            this.lblEslogan.Size = new System.Drawing.Size(229, 90);
+            this.lblEslogan.Size = new System.Drawing.Size(296, 114);
             this.lblEslogan.TabIndex = 5;
             this.lblEslogan.Text = "Controla tus autos\r\nAdministra tus ventas. \r\nGestiona tus rentas.";
             // 
@@ -86,7 +88,7 @@
             this.lblLogo.ForeColor = System.Drawing.SystemColors.Control;
             this.lblLogo.Location = new System.Drawing.Point(12, 9);
             this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(143, 62);
+            this.lblLogo.Size = new System.Drawing.Size(175, 76);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "SCVR";
             // 
@@ -96,16 +98,18 @@
             this.lblNombreSistema.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblNombreSistema.Location = new System.Drawing.Point(22, 100);
             this.lblNombreSistema.Name = "lblNombreSistema";
-            this.lblNombreSistema.Size = new System.Drawing.Size(271, 19);
+            this.lblNombreSistema.Size = new System.Drawing.Size(337, 23);
             this.lblNombreSistema.TabIndex = 1;
             this.lblNombreSistema.Text = "Sistema de Gestion Compra, Venta y Renta";
             // 
             // pnlLogin
             // 
+            this.pnlLogin.Controls.Add(this.txtApellido);
+            this.pnlLogin.Controls.Add(this.label2);
             this.pnlLogin.Controls.Add(this.btnIngresar);
             this.pnlLogin.Controls.Add(this.chkMostrarContraseña);
             this.pnlLogin.Controls.Add(this.txtContraseña);
-            this.pnlLogin.Controls.Add(this.txtUsuario);
+            this.pnlLogin.Controls.Add(this.txtNombre);
             this.pnlLogin.Controls.Add(this.lblTitulo);
             this.pnlLogin.Controls.Add(this.lblContraseña);
             this.pnlLogin.Controls.Add(this.lblUsuario);
@@ -123,20 +127,21 @@
             this.btnIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIngresar.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnIngresar.Location = new System.Drawing.Point(111, 470);
+            this.btnIngresar.Location = new System.Drawing.Point(110, 524);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(350, 45);
             this.btnIngresar.TabIndex = 9;
             this.btnIngresar.Text = "INICIAR SESIÓN";
             this.btnIngresar.UseVisualStyleBackColor = false;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // chkMostrarContraseña
             // 
             this.chkMostrarContraseña.AutoSize = true;
             this.chkMostrarContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkMostrarContraseña.Location = new System.Drawing.Point(111, 398);
+            this.chkMostrarContraseña.Location = new System.Drawing.Point(110, 452);
             this.chkMostrarContraseña.Name = "chkMostrarContraseña";
-            this.chkMostrarContraseña.Size = new System.Drawing.Size(130, 19);
+            this.chkMostrarContraseña.Size = new System.Drawing.Size(160, 24);
             this.chkMostrarContraseña.TabIndex = 8;
             this.chkMostrarContraseña.Text = "Mostrar Contraseña";
             this.chkMostrarContraseña.UseVisualStyleBackColor = true;
@@ -147,21 +152,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtContraseña.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(111, 340);
+            this.txtContraseña.Location = new System.Drawing.Point(110, 394);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Size = new System.Drawing.Size(401, 29);
+            this.txtContraseña.Size = new System.Drawing.Size(401, 34);
             this.txtContraseña.TabIndex = 7;
             // 
-            // txtUsuario
+            // txtNombre
             // 
-            this.txtUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(111, 236);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(401, 29);
-            this.txtUsuario.TabIndex = 6;
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(110, 198);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(401, 34);
+            this.txtNombre.TabIndex = 6;
             // 
             // lblTitulo
             // 
@@ -170,7 +175,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblTitulo.Location = new System.Drawing.Point(101, 33);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(200, 46);
+            this.lblTitulo.Size = new System.Drawing.Size(247, 57);
             this.lblTitulo.TabIndex = 5;
             this.lblTitulo.Text = "Bienvenido";
             // 
@@ -179,9 +184,9 @@
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContraseña.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblContraseña.Location = new System.Drawing.Point(107, 298);
+            this.lblContraseña.Location = new System.Drawing.Point(106, 352);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(96, 21);
+            this.lblContraseña.Size = new System.Drawing.Size(118, 28);
             this.lblContraseña.TabIndex = 4;
             this.lblContraseña.Text = "Contraseña";
             // 
@@ -190,24 +195,46 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblUsuario.Location = new System.Drawing.Point(107, 190);
+            this.lblUsuario.Location = new System.Drawing.Point(106, 152);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(69, 21);
+            this.lblUsuario.Size = new System.Drawing.Size(94, 28);
             this.lblUsuario.TabIndex = 3;
-            this.lblUsuario.Text = "Usuario";
+            this.lblUsuario.Text = "Nombre:";
             // 
             // lblSubtitulo
             // 
             this.lblSubtitulo.AutoSize = true;
             this.lblSubtitulo.Location = new System.Drawing.Point(107, 110);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(247, 19);
+            this.lblSubtitulo.Size = new System.Drawing.Size(309, 23);
             this.lblSubtitulo.TabIndex = 2;
             this.lblSubtitulo.Text = "Ingrese tus credenciales para continuar";
             // 
+            // txtApellido
+            // 
+            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.Location = new System.Drawing.Point(110, 304);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(401, 34);
+            this.txtApellido.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
+            this.label2.Location = new System.Drawing.Point(106, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(96, 28);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Apellido:";
+            // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(982, 623);
@@ -219,6 +246,7 @@
             this.Name = "FrmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGVR | Inicio de sesión";
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.pnlMarca.ResumeLayout(false);
             this.pnlMarca.PerformLayout();
             this.pnlLogin.ResumeLayout(false);
@@ -241,8 +269,10 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.CheckBox chkMostrarContraseña;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.Label label2;
     }
 }
 

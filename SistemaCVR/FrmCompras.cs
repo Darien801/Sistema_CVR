@@ -127,15 +127,15 @@ namespace SistemaCVR
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (cbxEmpleado.SelectedValue == null ||
-               cbxMarca.SelectedValue == null ||
-               cbxModelo.SelectedValue == null ||
-               cbxPaisDeOrigen.SelectedValue == null ||
-               cbxTipo.SelectedValue == null)
-            {
-                MessageBox.Show("Debe completar todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+            //if (cbxEmpleado.SelectedValue == null ||
+            //   cbxMarca.SelectedValue == null ||
+            //   cbxModelo.SelectedValue == null ||
+            //   cbxPaisDeOrigen.SelectedValue == null ||
+            //   cbxTipo.SelectedValue == null)
+            //{
+            //    MessageBox.Show("Debe completar todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    return;
+            //}
 
 
             string sql = @"

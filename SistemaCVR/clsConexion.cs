@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -81,9 +82,27 @@ namespace SistemaCVR
             combo.DataSource = Consultar(sql);
             combo.DisplayMember = visible;
             combo.ValueMember = valor;
-            combo.SelectedIndex = 0;
+            combo.SelectedIndex = -1;
         }
 
+
+        public string GenerarHashMD5(string texto)
+        {
+            using (MD5 md5 = MD5.Create())
+            {
+                byte[] entrada = Encoding.UTF8.GetBytes(texto);
+                byte[] hash = md5.ComputeHash(entrada);
+
+                StringBuilder resultado = new StringBuilder();
+
+                foreach (byte b in hash)
+                {
+                    resultado.Append(b.ToString("x2"));
+                }
+
+                return resultado.ToString();
+            }
+        }
 
     }
 }
