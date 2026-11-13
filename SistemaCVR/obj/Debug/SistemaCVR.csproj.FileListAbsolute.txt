@@ -68,3 +68,7 @@ C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\P
 C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmRentas.resources
 C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmReportes.resources
 C:\Users\darie\Documents\Itca\Ciclo II\Desarollo de Aplicaciones de Escritorio\Proyecto\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmVentas.resources
+C:\Users\brian\OneDrive\Desktop\ProyectoRepo\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmAsignacionEquipo.resources
+C:\Users\brian\OneDrive\Desktop\ProyectoRepo\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmRentas.resources
+C:\Users\brian\OneDrive\Desktop\ProyectoRepo\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmReportes.resources
+C:\Users\brian\OneDrive\Desktop\ProyectoRepo\Sistema_CVR\SistemaCVR\obj\Debug\SistemaCVR.FrmVentas.resources

@@ -379,5 +379,10 @@ namespace SistemaCVR
                 MessageBox.Show("No se pudo realizar la búsqueda: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void grpDatosRenta_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

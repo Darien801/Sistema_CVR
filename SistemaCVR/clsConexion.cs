@@ -57,6 +57,18 @@ namespace SistemaCVR
             return filasAfectadas;
         }
 
+        public object ejecutarEscalar(string sql, SqlParameter[] parametros)
+        {
+            using (SqlConnection conexion = new SqlConnection(cadena))
+            using (SqlCommand comando = new SqlCommand(sql, conexion))
+            {
+                if (parametros != null)
+                    comando.Parameters.AddRange(parametros);
+
+                conexion.Open();
+                return comando.ExecuteScalar();
+            }
+        }
 
         // -------------------------
         public void CargarCombos(
@@ -71,5 +83,7 @@ namespace SistemaCVR
             combo.ValueMember = valor;
             combo.SelectedIndex = 0;
         }
+
+
     }
 }

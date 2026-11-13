@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SistemaCVR
 {
@@ -15,6 +17,9 @@ namespace SistemaCVR
     {
         clsConexion con = new clsConexion();
         private int id_vehiculo = 0;
+
+        private byte[] imagenByte = null;
+        private bool imagenCambio = false;
         public FrmVehiculos()
         {
             InitializeComponent();
@@ -24,6 +29,22 @@ namespace SistemaCVR
         private object ValorONulo(string texto)
         {
             return string.IsNullOrWhiteSpace(texto) ? (object)DBNull.Value : texto.Trim();
+        }
+
+        private void ConfigurarGrid()
+        {
+            dgvVehiculos.RowHeadersVisible = false;
+            dgvVehiculos.AllowUserToAddRows = false;
+
+            if (dgvVehiculos.Columns["Imagen"] is DataGridViewImageColumn colImg)
+            {
+                colImg.ImageLayout = DataGridViewImageCellLayout.Zoom;  // mantiene proporción
+                colImg.Width = 120;
+                colImg.DefaultCellStyle.NullValue = null;               // sin "X" roja si no hay foto
+            }
+
+            foreach (DataGridViewRow fila in dgvVehiculos.Rows)
+                fila.Height = 80;
         }
 
         private void LimpiarCampos()
@@ -39,6 +60,8 @@ namespace SistemaCVR
             cbxAnio.SelectedIndex = -1;
             cbxColor.SelectedIndex = -1;
             cbxEstado.SelectedIndex = -1;
+            pbVehiculo.Image?.Dispose();
+            pbVehiculo.Image = null;
         }
 
         private void CargarDatos()
@@ -53,9 +76,9 @@ namespace SistemaCVR
                                 numeroMotor AS 'Numero de Motor',
                                 precioCompra as 'Precio de Compra',
                                 es.nombreEstado as Estado,
-                                ruta_imagen AS Ruta,
                                 anio AS Año,
-                                color AS Color 
+                                color AS Color,
+                                imagen AS Imagen
                             FROM vehiculo v
                             INNER JOIN modelo mo
                                 ON v.id_modelo = mo.id_modelo
@@ -67,6 +90,7 @@ namespace SistemaCVR
                           ";
 
             dgvVehiculos.DataSource = con.Consultar(sql);
+            ConfigurarGrid();
         }
 
 
@@ -74,33 +98,33 @@ namespace SistemaCVR
         {
             string sql = @"
                              SELECT
-                                v.id_vehiculo,
-                                mo.nombreModelo AS Modelo,
-                                ma.nombreMarca AS Marca,
-                                placa AS Placa,
-                                chasis AS Chasis,
-                                numeroMotor AS 'Numero de Motor',
-                                precioCompra as 'Precio de Compra',
-                                es.nombreEstado as Estado,
-                                ruta_imagen AS Ruta,
-                                anio AS Año,
-                                color AS Color 
-                            FROM vehiculo v
-                            INNER JOIN modelo mo
-                                ON v.id_modelo = mo.id_modelo
-                            INNER JOIN marca ma
-                                ON v.id_marca = ma.id_marca
-                            LEFT JOIN estado es
-                                ON v.id_estado = es.id_estado
-                            WHERE
-                                v.id_vehiculo LIKE @filtro OR
-                                es.nombreEstado LIKE @filtro OR
-                                placa LIKE @filtro OR
-                                chasis LIKE @filtro OR
-                                numeroMotor LIKE @filtro OR
-                                ma.nombreMarca LIKE @filtro OR
-                                mo.nombreModelo LIKE @filtro
-                            ORDER BY v.id_vehiculo DESC
+                            v.id_vehiculo,
+                            mo.nombreModelo AS Modelo,
+                            ma.nombreMarca AS Marca,
+                            v.placa AS Placa,
+                            v.chasis AS Chasis,
+                            v.numeroMotor AS 'Numero de Motor',
+                            v.precioCompra AS 'Precio de Compra',
+                            es.nombreEstado AS Estado,
+                            v.anio AS Año,
+                            v.color AS Color,
+                            v.imagen AS Imagen
+                        FROM vehiculo v
+                        INNER JOIN modelo mo
+                            ON v.id_modelo = mo.id_modelo
+                        INNER JOIN marca ma
+                            ON v.id_marca = ma.id_marca
+                        LEFT JOIN estado es
+                            ON v.id_estado = es.id_estado
+                        WHERE
+                            CAST(v.id_vehiculo AS VARCHAR(20)) LIKE @filtro OR
+                            es.nombreEstado LIKE @filtro OR
+                            v.placa LIKE @filtro OR
+                            v.chasis LIKE @filtro OR
+                            v.numeroMotor LIKE @filtro OR
+                            ma.nombreMarca LIKE @filtro OR
+                            mo.nombreModelo LIKE @filtro
+                        ORDER BY v.id_vehiculo DESC
                          ";
 
             SqlParameter[] parametros =
@@ -109,6 +133,7 @@ namespace SistemaCVR
             };
 
             dgvVehiculos.DataSource = con.FiltrarDatos(sql, parametros);
+            ConfigurarGrid();
 
         }
 
@@ -124,7 +149,7 @@ namespace SistemaCVR
 
             CargarDatos();
             LimpiarCampos();
-
+            ConfigurarGrid();
 
             for (int a = DateTime.Now.Year + 1; a >= 2000; a--)
             {
@@ -133,40 +158,71 @@ namespace SistemaCVR
                 
         }
 
+        private byte[] ObtenerImagen(int idVehiculo)
+        {
+            string sql = "SELECT imagen FROM vehiculo WHERE id_vehiculo = @id";
+
+            SqlParameter[] parametros =
+            {
+                new SqlParameter("@id", idVehiculo)
+            };
+
+            object resultado = con.ejecutarEscalar(sql, parametros);
+
+            return (resultado == null || resultado == DBNull.Value)
+                ? null
+                : (byte[])resultado;
+        }
+
+        private void MostrarImagen(byte[] bytes)
+        {
+            pbVehiculo.Image?.Dispose();
+            pbVehiculo.Image = null;
+            imagenByte = bytes;
+
+            if (bytes == null) return;
+
+            using (var ms = new MemoryStream(bytes))
+            {
+                pbVehiculo.Image = new Bitmap(ms);
+            }
+        }
+
         private void dgvVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0)
-            {
-                MessageBox.Show("Seleccione una fila", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            if (e.RowIndex < 0) return;   // clic en el encabezado: ignorar sin mensaje
+
             DataGridViewRow fila = dgvVehiculos.Rows[e.RowIndex];
 
-            id_vehiculo = Convert.ToInt32(fila.Cells[0].Value);
+            id_vehiculo = Convert.ToInt32(fila.Cells["id_vehiculo"].Value);
 
-            txtMostrarModelo.Text = fila.Cells[1].Value.ToString();
-            txtMostrarMarca.Text = fila.Cells[2].Value.ToString();
-            txtMostrarPlaca.Text = fila.Cells[3].Value.ToString();
-            txtMostrarChasis.Text = fila.Cells[4].Value.ToString();
-            txtMostrarMotor.Text = fila.Cells[5].Value.ToString();
-            txtPrecioCompra.Text = fila.Cells[6].Value.ToString();
+            txtMostrarModelo.Text = fila.Cells["Modelo"].Value?.ToString();
+            txtMostrarMarca.Text = fila.Cells["Marca"].Value?.ToString();
+            txtMostrarPlaca.Text = fila.Cells["Placa"].Value?.ToString();
+            txtMostrarChasis.Text = fila.Cells["Chasis"].Value?.ToString();
+            txtMostrarMotor.Text = fila.Cells["Numero de Motor"].Value?.ToString();
+            txtPrecioCompra.Text = fila.Cells["Precio de Compra"].Value?.ToString();
 
+            cbxEstado.SelectedIndex = cbxEstado.FindStringExact(
+                Convert.ToString(fila.Cells["Estado"].Value));
 
-            cbxEstado.SelectedIndex = cbxEstado.FindStringExact(Convert.ToString(fila.Cells[7].Value));
-
-            object anio = fila.Cells[9].Value;
+            object anio = fila.Cells["Año"].Value;
             cbxAnio.SelectedIndex = (anio == null || anio == DBNull.Value)
                 ? -1
                 : cbxAnio.FindStringExact(anio.ToString());
 
+            cbxColor.SelectedIndex = cbxColor.FindStringExact(
+                Convert.ToString(fila.Cells["Color"].Value));
 
-
-            cbxColor.SelectedIndex = cbxColor.FindStringExact(fila.Cells[10].Value.ToString());
+            // Imagen: se carga aparte desde la base de datos
+            imagenCambio = false;
+            MostrarImagen(ObtenerImagen(id_vehiculo));
 
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show($"imagenCambio = {imagenCambio}\nBytes = {(imagenByte == null ? "NULL" : imagenByte.Length.ToString())}");
             if (id_vehiculo == 0)
             {
                 MessageBox.Show("Seleccione un vehículo de la lista.", "Aviso",
@@ -192,12 +248,18 @@ namespace SistemaCVR
                             SET placa        = @placa,
                                 chasis       = @chasis,
                                 numeroMotor  = @motor,
-                                precioCompra = @precio,
+                                precioCompra = @precio, 
                                 id_estado    = @estado,
                                 anio         = @anio,
-                                color        = @color
+                                color        = @color,
+                                imagen       = CASE WHEN @cambioImagen = 1 THEN @imagen ELSE imagen END
                             WHERE id_vehiculo = @id
                          ";
+
+            SqlParameter pImagen = new SqlParameter("@imagen", SqlDbType.VarBinary, -1)
+            {
+                Value = (object)imagenByte ?? DBNull.Value
+            };
 
             SqlParameter[] parametros =
             {
@@ -211,6 +273,8 @@ namespace SistemaCVR
                     ? (object)DBNull.Value : Convert.ToInt32(cbxAnio.SelectedItem)),
                 new SqlParameter("@color",  cbxColor.SelectedIndex == -1
                     ? (object)DBNull.Value : cbxColor.Text),
+                pImagen,
+                new SqlParameter("@cambioImagen", SqlDbType.Bit) { Value = imagenCambio },
                 new SqlParameter("@id",     id_vehiculo)
             };
 
@@ -245,6 +309,25 @@ namespace SistemaCVR
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             Filtrar(txtBuscar.Text.Trim());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog())
+            {
+                ofd.Title = "Seleccionar imagen del vehículo";
+                ofd.Filter = "Imágenes (*.jpg;*.png;*.gif)|*.jpg;*.png;*.gif";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    imagenByte = File.ReadAllBytes(ofd.FileName);
+                    imagenCambio = true;
+                    pbVehiculo.Image?.Dispose();
+                    using (var ms = new MemoryStream(imagenByte))
+                    {
+                        pbVehiculo.Image = new Bitmap(ms);
+                    }
+                }
+            }
         }
     }
 }
