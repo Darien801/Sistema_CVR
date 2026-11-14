@@ -213,5 +213,10 @@ namespace SistemaCVR
         {
             filtarDatos(txtBuscar.Text.Trim());
         }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

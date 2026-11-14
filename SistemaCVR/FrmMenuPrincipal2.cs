@@ -57,5 +57,27 @@ namespace SistemaCVR
         {
             CargarFormulario<FrmReportes>();
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("¿Desea salir del sistema?",
+                "Salir",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (res == DialogResult.Yes)
+            {
+                foreach (Form frm in Application.OpenForms)
+                {
+                    if (frm is FrmLogin login)
+                    {
+                        login.limpiarCampos();
+                        login.Show();
+                        break;
+                    }
+                }
+                this.Close();
+            }
+        }
     }
 }

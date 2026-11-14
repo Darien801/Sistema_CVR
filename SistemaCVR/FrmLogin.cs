@@ -19,6 +19,13 @@ namespace SistemaCVR
             InitializeComponent();
         }
 
+        public void limpiarCampos()
+        {
+            txtNombre.Text = "";
+            txtApellido.Text = "";
+            txtContraseña.Text = "";
+            txtNombre.Focus();
+        }
 
         private void BuscarEmpleado()
         {
@@ -49,20 +56,27 @@ namespace SistemaCVR
                 }
 
                 string tipoCredenciales = tabla.Rows[0]["rolEmpleado"].ToString().Trim();
+
+                Form menu;
                 if (tipoCredenciales == "Administrador")
                 {
-                    FrmMenuPrincipal menu = new FrmMenuPrincipal();
-                    menu.FormClosed += (s, args) => this.Close();
-                    menu.Show();
+                    menu = new FrmMenuPrincipal();
                 }
                 else
                 {
-                    FrmMenuPrincipal2 menu = new FrmMenuPrincipal2();
-                    menu.FormClosed += (s, args) => this.Close();
-                    menu.Show();
+                    menu = new FrmMenuPrincipal2();
                 }
 
+                menu.FormClosed += (s, args) => 
+                {
+                    if (!this.Visible)
+                    {
+                        Application.Exit();
+                    }
+                };
+
                 this.Hide();
+                menu.Show();
 
 
             }
