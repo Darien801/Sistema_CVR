@@ -1,0 +1,10 @@
+
+Asignar una cantidad de unidades a cada equipo y validar que existan unidades para asignar (Opcional pero buena idea)
+
+Cuando se selecciona un empleado inactivo se debe de desmarcar el Check (Opcional pero buena idea)
+
+Implementar try catch en los formularios faltantes
+
+Método de cobro e imprimir váucher 
+
+Reportes 

@@ -95,5 +95,10 @@ namespace SistemaCVR
         {
             BuscarEmpleado();
         }
+
+        private void chkMostrarContraseña_CheckedChanged(object sender, EventArgs e)
+        {
+            txtContraseña.UseSystemPasswordChar = !chkMostrarContraseña.Checked;
+        }
     }
 }

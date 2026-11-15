@@ -16,6 +16,7 @@ namespace SistemaCVR
         private readonly clsConexion con = new clsConexion();
 
         private int idSeleccionado = 0;
+        private bool activos = true;
         public FrmEmpleado()
         {
             InitializeComponent();
@@ -23,10 +24,25 @@ namespace SistemaCVR
 
 
 
-        private void mostrarDatos()
+        private void mostrarDatos(string filtro)
         {
-            string sql = "SELECT id_empleado as ID, nombre as Nombre, apellido as Apellido, DUI, rolEmpleado as Rol, estadoEmpleado as Estado FROM empleado";
-            dgvEmpleado.DataSource = con.Consultar(sql);
+            string sql = @"SELECT id_empleado AS ID, nombre AS Nombre, apellido AS Apellido,
+                          DUI, rolEmpleado AS Rol, estadoEmpleado AS Estado
+                            FROM empleado
+                            WHERE
+                                (@soloActivos = 0 OR estadoEmpleado = N'Activo') AND
+                                (nombre LIKE @filtro
+                                  OR apellido LIKE @filtro
+                                  OR DUI LIKE @filtro)";
+
+
+            SqlParameter[] parametros =
+                {
+                    new SqlParameter("@filtro", $"%{filtro.Trim()}%"),
+                    new SqlParameter("@soloActivos", activos ? 1 : 0  )
+                };
+            ;
+            dgvEmpleado.DataSource = con.FiltrarDatos(sql, parametros);
             dgvEmpleado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -35,13 +51,16 @@ namespace SistemaCVR
             string sql = @"SELECT id_empleado AS ID, nombre AS Nombre, apellido AS Apellido,
                           DUI, rolEmpleado AS Rol, estadoEmpleado AS Estado
                    FROM empleado
-                   WHERE nombre LIKE @filtro
+                   WHERE
+                        (@soloActivos = 0 OR estadoEmpleado = Activo ) AND
+                    nombre LIKE @filtro
                       OR apellido LIKE @filtro
                       OR DUI LIKE @filtro";
 
-            SqlParameter[] parametros = 
+            SqlParameter[] parametros =
                 {
-                    new SqlParameter("@filtro", $"%{filtro.Trim()}%")
+                    new SqlParameter("@filtro", $"%{filtro.Trim()}%"),
+                    new SqlParameter("@soloActivos", activos ? 1 : 0  )
                 };
 
             dgvEmpleado.DataSource = con.FiltrarDatos(sql, parametros);
@@ -97,14 +116,14 @@ namespace SistemaCVR
             MessageBox.Show("Empleado guardado correctamente.",
                 "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            mostrarDatos();
+            mostrarDatos(txtBuscar.Text.Trim());
             LimpiarCampos();
         }
         
 
         private void FrmEmpleado_Load(object sender, EventArgs e)
         {
-            mostrarDatos();
+            mostrarDatos(txtBuscar.Text.Trim());
         }
 
         private void dgvEmpleado_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -166,7 +185,7 @@ namespace SistemaCVR
 
             con.ejecutarComando(sql, parametros.ToArray());
             MessageBox.Show("Empleado actualizado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            mostrarDatos();
+            mostrarDatos(txtBuscar.Text.Trim());
             LimpiarCampos();
             idSeleccionado = 0;
         }
@@ -190,7 +209,7 @@ namespace SistemaCVR
 
                 con.ejecutarComando(sql, parametros.ToArray());
                 MessageBox.Show("Empleado eliminado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mostrarDatos();
+                mostrarDatos(txtBuscar.Text.Trim());
                 LimpiarCampos();
                 idSeleccionado = 0;
             }
@@ -205,7 +224,7 @@ namespace SistemaCVR
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            mostrarDatos();
+            mostrarDatos(txtBuscar.Text.Trim());
             txtBuscar.Clear();
         }
 
@@ -217,6 +236,18 @@ namespace SistemaCVR
         private void txtPass_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = !checkBox1.Checked;
+        }
+
+        private void btnRentasActivas_Click(object sender, EventArgs e)
+        {
+            activos = !activos;
+            btnRentasActivas.Text = activos ?  "Todos" : "Solo activos";
+            mostrarDatos(txtBuscar.Text.Trim());
         }
     }
 }

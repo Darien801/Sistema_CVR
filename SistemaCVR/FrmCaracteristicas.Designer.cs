@@ -64,7 +64,7 @@
             this.lblGestionClientes.Location = new System.Drawing.Point(14, 35);
             this.lblGestionClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGestionClientes.Name = "lblGestionClientes";
-            this.lblGestionClientes.Size = new System.Drawing.Size(879, 88);
+            this.lblGestionClientes.Size = new System.Drawing.Size(621, 62);
             this.lblGestionClientes.TabIndex = 22;
             this.lblGestionClientes.Text = "Características del vehículo";
             // 
@@ -75,11 +75,11 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(19, 165);
+            this.groupBox1.Location = new System.Drawing.Point(25, 119);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(828, 1019);
+            this.groupBox1.Size = new System.Drawing.Size(517, 749);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tipos de vehículos";
@@ -87,31 +87,31 @@
             // dgvModelo
             // 
             this.dgvModelo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModelo.Location = new System.Drawing.Point(63, 206);
+            this.dgvModelo.Location = new System.Drawing.Point(13, 177);
             this.dgvModelo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvModelo.Name = "dgvModelo";
             this.dgvModelo.RowHeadersWidth = 72;
             this.dgvModelo.RowTemplate.Height = 31;
-            this.dgvModelo.Size = new System.Drawing.Size(669, 546);
+            this.dgvModelo.Size = new System.Drawing.Size(474, 461);
             this.dgvModelo.TabIndex = 5;
             this.dgvModelo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModelo_CellClick);
             // 
             // txtModelo
             // 
             this.txtModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtModelo.Location = new System.Drawing.Point(63, 135);
+            this.txtModelo.Location = new System.Drawing.Point(13, 106);
             this.txtModelo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtModelo.Name = "txtModelo";
-            this.txtModelo.Size = new System.Drawing.Size(641, 45);
+            this.txtModelo.Size = new System.Drawing.Size(474, 34);
             this.txtModelo.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 73);
+            this.label3.Location = new System.Drawing.Point(6, 44);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 38);
+            this.label3.Size = new System.Drawing.Size(89, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "Modelo:";
             // 
@@ -125,11 +125,11 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.groupBox2.Location = new System.Drawing.Point(865, 178);
+            this.groupBox2.Location = new System.Drawing.Point(548, 132);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(821, 1006);
+            this.groupBox2.Size = new System.Drawing.Size(821, 736);
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Marcas y Modelos";
@@ -137,23 +137,26 @@
             // dgvMarca
             // 
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarca.Location = new System.Drawing.Point(37, 209);
+            this.dgvMarca.Location = new System.Drawing.Point(34, 158);
             this.dgvMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.RowHeadersWidth = 72;
             this.dgvMarca.RowTemplate.Height = 31;
-            this.dgvMarca.Size = new System.Drawing.Size(757, 409);
+            this.dgvMarca.Size = new System.Drawing.Size(515, 409);
             this.dgvMarca.TabIndex = 6;
             this.dgvMarca.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarca_CellClick);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.Brown;
-            this.button3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button3.Location = new System.Drawing.Point(532, 717);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
+            this.button3.Location = new System.Drawing.Point(260, 586);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 68);
+            this.button3.Size = new System.Drawing.Size(102, 39);
             this.button3.TabIndex = 4;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = false;
@@ -161,12 +164,15 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Peru;
-            this.button2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button2.Location = new System.Drawing.Point(320, 717);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
+            this.button2.Location = new System.Drawing.Point(140, 586);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 68);
+            this.button2.Size = new System.Drawing.Size(102, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Editar";
             this.button2.UseVisualStyleBackColor = false;
@@ -174,12 +180,15 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.button1.Location = new System.Drawing.Point(107, 717);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
+            this.button1.Location = new System.Drawing.Point(23, 586);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 68);
+            this.button1.Size = new System.Drawing.Size(102, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "Guardar";
             this.button1.UseVisualStyleBackColor = false;
@@ -188,27 +197,27 @@
             // txtMarca
             // 
             this.txtMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMarca.Location = new System.Drawing.Point(26, 145);
+            this.txtMarca.Location = new System.Drawing.Point(23, 94);
             this.txtMarca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMarca.Name = "txtMarca";
-            this.txtMarca.Size = new System.Drawing.Size(641, 45);
+            this.txtMarca.Size = new System.Drawing.Size(526, 34);
             this.txtMarca.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 82);
+            this.label2.Location = new System.Drawing.Point(27, 31);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 38);
+            this.label2.Size = new System.Drawing.Size(76, 28);
             this.label2.TabIndex = 0;
             this.label2.Text = "Marca:";
             // 
             // FrmCaracteristicas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 38F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1709, 1213);
+            this.ClientSize = new System.Drawing.Size(1722, 1055);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
