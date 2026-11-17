@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClosedXML.Excel;
 
 namespace SistemaCVR
 {
@@ -57,6 +58,7 @@ namespace SistemaCVR
 
             DataTable tabla = con.FiltrarDatos(sql, parametros);
             MostrarTabla(tabla);
+            FormatoMoneda("Precio");
 
             object suma = tabla.Compute("SUM(Precio)", "Estado = 'Completada'");
             decimal total = suma == DBNull.Value ? 0 : Convert.ToDecimal(suma);
@@ -97,6 +99,7 @@ namespace SistemaCVR
 
             DataTable tabla = con.FiltrarDatos(sql, parametros);
             MostrarTabla(tabla);
+            FormatoMoneda("PrecioHora", "Total");
 
             object suma = tabla.Compute("SUM(Total)", "");
             decimal total = suma == DBNull.Value ? 0 : Convert.ToDecimal(suma);
@@ -176,38 +179,23 @@ namespace SistemaCVR
             }
         }
 
-        private string Csv(object valor)
-        {
-            string texto;
-            if (valor is DateTime)
-            {
-                DateTime fecha = (DateTime)valor;
-                texto = fecha.ToString(fecha.TimeOfDay == TimeSpan.Zero ? "dd/MM/yyyy" : "dd/MM/yyyy HH:mm");
-            }
-            else if (valor is decimal)
-            {
-                texto = ((decimal)valor).ToString("0.00", CultureInfo.InvariantCulture);
-            }
-            else
-            {
-                texto = Convert.ToString(valor);
-            }
-            return "\"" + texto.Replace("\"", "\"\"") + "\"";
-        }
 
         private void btnExportar_Click(object sender, EventArgs e)
         {
             DataTable tabla = dgvReporte.DataSource as DataTable;
+
             if (tabla == null || tabla.Rows.Count == 0)
             {
-                MessageBox.Show("Genere primero un reporte con resultados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Genere primero un reporte con resultados.",
+                    "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             using (SaveFileDialog dialogo = new SaveFileDialog())
             {
-                dialogo.Filter = "Archivo CSV (*.csv)|*.csv";
-                dialogo.FileName = "Reporte_" + cmbTipoReporte.Text + "_" + DateTime.Today.ToString("yyyyMMdd") + ".csv";
+                dialogo.Filter = "Archivo Excel (*.xlsx)|*.xlsx";
+                dialogo.FileName = "Reporte_" + cmbTipoReporte.Text + "_" +
+                                   DateTime.Today.ToString("yyyyMMdd") + ".xlsx";
 
                 if (dialogo.ShowDialog() != DialogResult.OK)
                 {
@@ -216,19 +204,34 @@ namespace SistemaCVR
 
                 try
                 {
-                    StringBuilder sb = new StringBuilder();
-                    sb.AppendLine(string.Join(",", tabla.Columns.Cast<DataColumn>().Select(c => Csv(c.ColumnName))));
-                    foreach (DataRow fila in tabla.Rows)
+                    using (XLWorkbook libro = new XLWorkbook())
                     {
-                        sb.AppendLine(string.Join(",", fila.ItemArray.Select(v => Csv(v))));
+                        var hoja = libro.Worksheets.Add("Reporte");
+
+                        // Insertar los datos del DataTable
+                        var tablaExcel = hoja.Cell(1, 1).InsertTable(tabla);
+
+                        // Dar formato a los encabezados
+                        tablaExcel.Theme = XLTableTheme.TableStyleMedium2;
+
+                        // Ajustar el ancho de las columnas
+                        hoja.Columns().AdjustToContents();
+
+                        // Mantener visible la primera fila al desplazarse
+                        hoja.SheetView.FreezeRows(1);
+
+                        // Guardar el archivo Excel
+                        libro.SaveAs(dialogo.FileName);
                     }
 
-                    File.WriteAllText(dialogo.FileName, sb.ToString(), new UTF8Encoding(true));
-                    MessageBox.Show("Reporte exportado correctamente.", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Reporte exportado correctamente.",
+                        "Registro exitoso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo exportar el reporte: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo exportar el reporte: " + ex.Message,
+                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -239,6 +242,8 @@ namespace SistemaCVR
             dtpDesde.Enabled = usaFechas;
             dtpHasta.Enabled = usaFechas;
         }
+
+
 
         private void FormatoMoneda(params string[] columnas)
         {
@@ -251,6 +256,7 @@ namespace SistemaCVR
                 }
             }
         }
+    
 
         private void ReporteEstadisticasVentas(SqlParameter[] parametros)
         {
@@ -308,6 +314,8 @@ namespace SistemaCVR
                               "   |   Marca más vendida: " + (marca == null || marca == DBNull.Value ? "N/D" : marca.ToString());
         }
 
+
+
         private void ReporteVehiculos()
         {
             string sql = @"
@@ -349,6 +357,7 @@ namespace SistemaCVR
                               "   |   Disponibles: " + disponibles +
                               (detalle.Length > 0 ? "   |   " + detalle : "");
         }
+
 
         private void ReporteUltimasRentas()
         {
