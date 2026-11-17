@@ -105,18 +105,21 @@
             this.cmbTipoReporte.FormattingEnabled = true;
             this.cmbTipoReporte.Items.AddRange(new object[] {
             "Ventas",
-            "Rentas"});
+            "Rentas",
+            "Estadísticas de ventas",
+            "Estado de vehículos",
+            "Últimas rentas"});
             this.cmbTipoReporte.Location = new System.Drawing.Point(88, 38);
             this.cmbTipoReporte.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbTipoReporte.Name = "cmbTipoReporte";
-            this.cmbTipoReporte.Size = new System.Drawing.Size(114, 29);
+            this.cmbTipoReporte.Size = new System.Drawing.Size(210, 29);
             this.cmbTipoReporte.TabIndex = 1;
             this.cmbTipoReporte.SelectedIndexChanged += new System.EventHandler(this.cmbTipoReporte_SelectedIndexChanged);
             // 
             // lblDesde
             // 
             this.lblDesde.AutoSize = true;
-            this.lblDesde.Location = new System.Drawing.Point(210, 38);
+            this.lblDesde.Location = new System.Drawing.Point(306, 38);
             this.lblDesde.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDesde.Name = "lblDesde";
             this.lblDesde.Size = new System.Drawing.Size(61, 21);
@@ -127,7 +130,7 @@
             // 
             this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDesde.Location = new System.Drawing.Point(275, 35);
+            this.dtpDesde.Location = new System.Drawing.Point(371, 35);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(114, 29);
@@ -136,7 +139,7 @@
             // lblHasta
             // 
             this.lblHasta.AutoSize = true;
-            this.lblHasta.Location = new System.Drawing.Point(401, 38);
+            this.lblHasta.Location = new System.Drawing.Point(497, 38);
             this.lblHasta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHasta.Name = "lblHasta";
             this.lblHasta.Size = new System.Drawing.Size(57, 21);
@@ -147,7 +150,7 @@
             // 
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHasta.Location = new System.Drawing.Point(462, 35);
+            this.dtpHasta.Location = new System.Drawing.Point(558, 35);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(114, 29);
@@ -161,7 +164,7 @@
             this.btnGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnGenerar.Location = new System.Drawing.Point(592, 33);
+            this.btnGenerar.Location = new System.Drawing.Point(688, 33);
             this.btnGenerar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(90, 32);
@@ -178,7 +181,7 @@
             this.btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExportar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnExportar.Location = new System.Drawing.Point(694, 33);
+            this.btnExportar.Location = new System.Drawing.Point(790, 33);
             this.btnExportar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(112, 32);
