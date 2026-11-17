@@ -58,7 +58,7 @@ namespace SistemaCVR
 
             DataTable tabla = con.FiltrarDatos(sql, parametros);
             MostrarTabla(tabla);
-            FormatoMoneda("Precio");
+            
 
             object suma = tabla.Compute("SUM(Precio)", "Estado = 'Completada'");
             decimal total = suma == DBNull.Value ? 0 : Convert.ToDecimal(suma);
@@ -99,7 +99,7 @@ namespace SistemaCVR
 
             DataTable tabla = con.FiltrarDatos(sql, parametros);
             MostrarTabla(tabla);
-            FormatoMoneda("PrecioHora", "Total");
+            
 
             object suma = tabla.Compute("SUM(Total)", "");
             decimal total = suma == DBNull.Value ? 0 : Convert.ToDecimal(suma);

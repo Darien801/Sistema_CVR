@@ -3,15 +3,19 @@
   "WorkspaceRootPath": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmasignacionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmasignacionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmreportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmasignacionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmasignacionequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmventas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,8 +23,20 @@
       "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmequipo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmrentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmrentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|c:\\users\\darie\\documents\\itca\\ciclo ii\\desarollo de aplicaciones de escritorio\\proyecto\\sistema_cvr\\sistema_cvr\\sistemacvr\\frmrentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F3333B3-B312-411B-87A1-F8268DF65B44}|SistemaCVR.csproj|solutionrelative:frmrentas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -43,56 +59,109 @@
               "ViewState": "AgIAAAIAAAAAAAAAAAAqwBIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-26T03:39:08.214Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "clsConexion.cs",
               "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\clsConexion.cs",
               "RelativeDocumentMoniker": "clsConexion.cs",
               "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\clsConexion.cs",
               "RelativeToolTip": "clsConexion.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAEQAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAwDcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-11-13T16:20:06.69Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "FrmAsignacionEquipo.cs",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmAsignacionEquipo.cs",
+              "RelativeDocumentMoniker": "FrmAsignacionEquipo.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmAsignacionEquipo.cs",
+              "RelativeToolTip": "FrmAsignacionEquipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T23:33:40.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmAsignacionEquipo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmAsignacionEquipo.cs",
+              "RelativeDocumentMoniker": "FrmAsignacionEquipo.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmAsignacionEquipo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmAsignacionEquipo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T23:33:38.21Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FrmVentas.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmVentas.cs",
               "RelativeDocumentMoniker": "FrmVentas.cs",
               "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmVentas.cs [Dise\u00F1o]",
               "RelativeToolTip": "FrmVentas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T16:19:18.716Z"
+              "WhenOpened": "2026-11-17T23:32:18.401Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmReportes.cs",
-              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmReportes.cs",
-              "RelativeDocumentMoniker": "FrmReportes.cs",
-              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmReportes.cs",
-              "RelativeToolTip": "FrmReportes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPIAAAApAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "FrmEquipo.cs",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmEquipo.cs",
+              "RelativeDocumentMoniker": "FrmEquipo.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmEquipo.cs",
+              "RelativeToolTip": "FrmEquipo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T14:40:04.064Z",
+              "WhenOpened": "2026-11-17T23:25:45.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmReportes.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmReportes.cs",
-              "RelativeDocumentMoniker": "FrmReportes.cs",
-              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmReportes.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FrmReportes.cs [Dise\u00F1o]",
+              "DocumentIndex": 5,
+              "Title": "FrmEquipo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmEquipo.cs",
+              "RelativeDocumentMoniker": "FrmEquipo.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmEquipo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmEquipo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-17T14:40:01.859Z",
+              "WhenOpened": "2026-11-17T23:25:43.657Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmRentas.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmRentas.cs",
+              "RelativeDocumentMoniker": "FrmRentas.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmRentas.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmRentas.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T23:19:11.88Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmRentas.cs",
+              "DocumentMoniker": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmRentas.cs",
+              "RelativeDocumentMoniker": "FrmRentas.cs",
+              "ToolTip": "C:\\Users\\darie\\Documents\\Itca\\Ciclo II\\Desarollo de Aplicaciones de Escritorio\\Proyecto\\Sistema_CVR\\Sistema_CVR\\SistemaCVR\\FrmRentas.cs",
+              "RelativeToolTip": "FrmRentas.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAuwI4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-17T23:15:58.778Z",
+              "EditorCaption": ""
             }
           ]
         }

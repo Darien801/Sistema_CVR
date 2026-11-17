@@ -52,7 +52,7 @@ namespace SistemaCVR
                           DUI, rolEmpleado AS Rol, estadoEmpleado AS Estado
                    FROM empleado
                    WHERE
-                        (@soloActivos = 0 OR estadoEmpleado = Activo ) AND
+                        (@soloActivos = 0 OR estadoEmpleado = 'Activo' ) AND
                     nombre LIKE @filtro
                       OR apellido LIKE @filtro
                       OR DUI LIKE @filtro";

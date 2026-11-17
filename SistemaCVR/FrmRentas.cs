@@ -137,7 +137,13 @@ namespace SistemaCVR
         private void LimpiarCampos()
         {
             cmbCliente.SelectedIndex = -1;
+
+            cmbVehiculo.DataSource = null;
             cmbVehiculo.SelectedIndex = -1;
+            CargarComboVehiculos(); 
+
+
+
             cmbEmpleado.SelectedIndex = -1;
             dtpFechaInicio.Value = Minuto(DateTime.Now);
             dtpFechaFin.Value = Minuto(DateTime.Now).AddDays(1);

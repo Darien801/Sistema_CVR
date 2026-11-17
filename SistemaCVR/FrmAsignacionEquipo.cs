@@ -12,6 +12,7 @@ using System.Windows.Forms;
 namespace SistemaCVR
 {
     // Formulario modal: se abre desde FrmRentas con el id de la renta seleccionada.
+    
     public partial class FrmAsignacionEquipo : Form
     {
         private readonly clsConexion con = new clsConexion();

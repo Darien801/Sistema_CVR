@@ -127,20 +127,20 @@ namespace SistemaCVR
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            //if (cbxEmpleado.SelectedValue == null ||
-            //   cbxMarca.SelectedValue == null ||
-            //   cbxModelo.SelectedValue == null ||
-            //   cbxPaisDeOrigen.SelectedValue == null ||
-            //   cbxTipo.SelectedValue == null)
-            //{
-            //    MessageBox.Show("Debe completar todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    return;
-            //}
+            if (cbxEmpleado.SelectedValue == null ||
+               cbxMarca.SelectedValue == null ||
+               cbxModelo.SelectedValue == null ||
+               string.IsNullOrWhiteSpace(cbxPaisDeOrigen.Text) ||
+               string.IsNullOrWhiteSpace(cbxTipo.Text))
+            {
+                MessageBox.Show("Debe completar todos los campos.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
 
             string sql = @"
                             INSERT INTO compra (id_empleado, fechaRegistro, paisOrigen, observaciones, nombreTipo, id_marca, id_modelo)
-                            VALUES (@id_empleado, GETDATE(), @paisOrigen, @observaciones, @nombreTipo, @id_marca, @id_modelo);
+                            VALUES (@id_empleado, SYSDATETIME(), @paisOrigen, @observaciones, @nombreTipo, @id_marca, @id_modelo);
                         ";
 
             SqlParameter[] parametros =
