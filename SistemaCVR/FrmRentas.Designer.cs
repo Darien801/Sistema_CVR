@@ -79,20 +79,18 @@
             this.lblRentas.AutoSize = true;
             this.lblRentas.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRentas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblRentas.Location = new System.Drawing.Point(16, 14);
-            this.lblRentas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRentas.Location = new System.Drawing.Point(12, 9);
             this.lblRentas.Name = "lblRentas";
-            this.lblRentas.Size = new System.Drawing.Size(245, 88);
+            this.lblRentas.Size = new System.Drawing.Size(174, 62);
             this.lblRentas.TabIndex = 0;
             this.lblRentas.Text = "Rentas";
             // 
             // lblLinea
             // 
             this.lblLinea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblLinea.Location = new System.Drawing.Point(12, 135);
-            this.lblLinea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLinea.Location = new System.Drawing.Point(9, 90);
             this.lblLinea.Name = "lblLinea";
-            this.lblLinea.Size = new System.Drawing.Size(2338, 2);
+            this.lblLinea.Size = new System.Drawing.Size(1700, 1);
             this.lblLinea.TabIndex = 1;
             // 
             // grpDatosRenta
@@ -117,11 +115,11 @@
             this.grpDatosRenta.Controls.Add(this.btnDevolver);
             this.grpDatosRenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosRenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.grpDatosRenta.Location = new System.Drawing.Point(16, 154);
-            this.grpDatosRenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.grpDatosRenta.Location = new System.Drawing.Point(12, 103);
+            this.grpDatosRenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpDatosRenta.Name = "grpDatosRenta";
-            this.grpDatosRenta.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.grpDatosRenta.Size = new System.Drawing.Size(979, 1101);
+            this.grpDatosRenta.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpDatosRenta.Size = new System.Drawing.Size(712, 734);
             this.grpDatosRenta.TabIndex = 2;
             this.grpDatosRenta.TabStop = false;
             this.grpDatosRenta.Text = "Datos de la renta";
@@ -130,10 +128,9 @@
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(18, 78);
-            this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCliente.Location = new System.Drawing.Point(13, 52);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(116, 38);
+            this.lblCliente.Size = new System.Drawing.Size(83, 28);
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente:";
             // 
@@ -146,19 +143,18 @@
             this.cmbCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCliente.ForeColor = System.Drawing.Color.Black;
             this.cmbCliente.FormattingEnabled = true;
-            this.cmbCliente.Location = new System.Drawing.Point(275, 72);
-            this.cmbCliente.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbCliente.Location = new System.Drawing.Point(200, 48);
+            this.cmbCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(665, 46);
+            this.cmbCliente.Size = new System.Drawing.Size(485, 36);
             this.cmbCliente.TabIndex = 1;
             // 
             // lblVehiculo
             // 
             this.lblVehiculo.AutoSize = true;
-            this.lblVehiculo.Location = new System.Drawing.Point(18, 171);
-            this.lblVehiculo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehiculo.Location = new System.Drawing.Point(13, 114);
             this.lblVehiculo.Name = "lblVehiculo";
-            this.lblVehiculo.Size = new System.Drawing.Size(137, 38);
+            this.lblVehiculo.Size = new System.Drawing.Size(98, 28);
             this.lblVehiculo.TabIndex = 2;
             this.lblVehiculo.Text = "Vehículo:";
             // 
@@ -171,19 +167,18 @@
             this.cmbVehiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbVehiculo.ForeColor = System.Drawing.Color.Black;
             this.cmbVehiculo.FormattingEnabled = true;
-            this.cmbVehiculo.Location = new System.Drawing.Point(275, 165);
-            this.cmbVehiculo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbVehiculo.Location = new System.Drawing.Point(200, 110);
+            this.cmbVehiculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbVehiculo.Name = "cmbVehiculo";
-            this.cmbVehiculo.Size = new System.Drawing.Size(665, 46);
+            this.cmbVehiculo.Size = new System.Drawing.Size(485, 36);
             this.cmbVehiculo.TabIndex = 3;
             // 
             // lblEmpleado
             // 
             this.lblEmpleado.AutoSize = true;
-            this.lblEmpleado.Location = new System.Drawing.Point(18, 264);
-            this.lblEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmpleado.Location = new System.Drawing.Point(13, 176);
             this.lblEmpleado.Name = "lblEmpleado";
-            this.lblEmpleado.Size = new System.Drawing.Size(155, 38);
+            this.lblEmpleado.Size = new System.Drawing.Size(110, 28);
             this.lblEmpleado.TabIndex = 4;
             this.lblEmpleado.Text = "Empleado:";
             // 
@@ -196,19 +191,18 @@
             this.cmbEmpleado.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmpleado.ForeColor = System.Drawing.Color.Black;
             this.cmbEmpleado.FormattingEnabled = true;
-            this.cmbEmpleado.Location = new System.Drawing.Point(275, 258);
-            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.cmbEmpleado.Location = new System.Drawing.Point(200, 172);
+            this.cmbEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbEmpleado.Name = "cmbEmpleado";
-            this.cmbEmpleado.Size = new System.Drawing.Size(665, 46);
+            this.cmbEmpleado.Size = new System.Drawing.Size(485, 36);
             this.cmbEmpleado.TabIndex = 5;
             // 
             // lblFechaInicio
             // 
             this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Location = new System.Drawing.Point(18, 357);
-            this.lblFechaInicio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaInicio.Location = new System.Drawing.Point(13, 238);
             this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(219, 38);
+            this.lblFechaInicio.Size = new System.Drawing.Size(158, 28);
             this.lblFechaInicio.TabIndex = 6;
             this.lblFechaInicio.Text = "Fecha de inicio:";
             // 
@@ -217,19 +211,18 @@
             this.dtpFechaInicio.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpFechaInicio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(275, 351);
-            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(200, 234);
+            this.dtpFechaInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(342, 45);
+            this.dtpFechaInicio.Size = new System.Drawing.Size(250, 34);
             this.dtpFechaInicio.TabIndex = 7;
             // 
             // lblFechaFin
             // 
             this.lblFechaFin.AutoSize = true;
-            this.lblFechaFin.Location = new System.Drawing.Point(18, 450);
-            this.lblFechaFin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaFin.Location = new System.Drawing.Point(13, 300);
             this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(179, 38);
+            this.lblFechaFin.Size = new System.Drawing.Size(128, 28);
             this.lblFechaFin.TabIndex = 8;
             this.lblFechaFin.Text = "Fin previsto:";
             // 
@@ -238,19 +231,18 @@
             this.dtpFechaFin.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpFechaFin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaFin.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpFechaFin.Location = new System.Drawing.Point(275, 444);
-            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dtpFechaFin.Location = new System.Drawing.Point(200, 296);
+            this.dtpFechaFin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(342, 45);
+            this.dtpFechaFin.Size = new System.Drawing.Size(250, 34);
             this.dtpFechaFin.TabIndex = 9;
             // 
             // lblPrecioHora
             // 
             this.lblPrecioHora.AutoSize = true;
-            this.lblPrecioHora.Location = new System.Drawing.Point(18, 543);
-            this.lblPrecioHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecioHora.Location = new System.Drawing.Point(13, 362);
             this.lblPrecioHora.Name = "lblPrecioHora";
-            this.lblPrecioHora.Size = new System.Drawing.Size(227, 38);
+            this.lblPrecioHora.Size = new System.Drawing.Size(163, 28);
             this.lblPrecioHora.TabIndex = 10;
             this.lblPrecioHora.Text = "Precio por hora:";
             // 
@@ -259,20 +251,19 @@
             this.txtPrecioHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrecioHora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecioHora.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecioHora.Location = new System.Drawing.Point(275, 537);
-            this.txtPrecioHora.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPrecioHora.Location = new System.Drawing.Point(200, 358);
+            this.txtPrecioHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrecioHora.MaxLength = 13;
             this.txtPrecioHora.Name = "txtPrecioHora";
-            this.txtPrecioHora.Size = new System.Drawing.Size(274, 45);
+            this.txtPrecioHora.Size = new System.Drawing.Size(200, 34);
             this.txtPrecioHora.TabIndex = 11;
             // 
             // lblObservaciones
             // 
             this.lblObservaciones.AutoSize = true;
-            this.lblObservaciones.Location = new System.Drawing.Point(18, 636);
-            this.lblObservaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblObservaciones.Location = new System.Drawing.Point(13, 424);
             this.lblObservaciones.Name = "lblObservaciones";
-            this.lblObservaciones.Size = new System.Drawing.Size(214, 38);
+            this.lblObservaciones.Size = new System.Drawing.Size(155, 28);
             this.lblObservaciones.TabIndex = 12;
             this.lblObservaciones.Text = "Observaciones:";
             // 
@@ -283,13 +274,13 @@
             this.txtObservaciones.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservaciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObservaciones.ForeColor = System.Drawing.Color.Black;
-            this.txtObservaciones.Location = new System.Drawing.Point(18, 693);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtObservaciones.Location = new System.Drawing.Point(13, 462);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtObservaciones.MaxLength = 500;
             this.txtObservaciones.Multiline = true;
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtObservaciones.Size = new System.Drawing.Size(923, 179);
+            this.txtObservaciones.Size = new System.Drawing.Size(672, 120);
             this.txtObservaciones.TabIndex = 13;
             // 
             // btnGuardar
@@ -300,10 +291,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnGuardar.Location = new System.Drawing.Point(627, 900);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(456, 600);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(139, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(101, 39);
             this.btnGuardar.TabIndex = 14;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -317,10 +308,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(803, 900);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLimpiar.Location = new System.Drawing.Point(584, 600);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(139, 58);
+            this.btnLimpiar.Size = new System.Drawing.Size(101, 39);
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -334,10 +325,10 @@
             this.btnAsignarEquipo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAsignarEquipo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAsignarEquipo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnAsignarEquipo.Location = new System.Drawing.Point(454, 982);
-            this.btnAsignarEquipo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnAsignarEquipo.Location = new System.Drawing.Point(330, 655);
+            this.btnAsignarEquipo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAsignarEquipo.Name = "btnAsignarEquipo";
-            this.btnAsignarEquipo.Size = new System.Drawing.Size(241, 58);
+            this.btnAsignarEquipo.Size = new System.Drawing.Size(175, 39);
             this.btnAsignarEquipo.TabIndex = 16;
             this.btnAsignarEquipo.Text = "Asignar equipo";
             this.btnAsignarEquipo.UseVisualStyleBackColor = false;
@@ -351,10 +342,10 @@
             this.btnDevolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDevolver.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolver.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnDevolver.Location = new System.Drawing.Point(708, 982);
-            this.btnDevolver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDevolver.Location = new System.Drawing.Point(515, 655);
+            this.btnDevolver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDevolver.Name = "btnDevolver";
-            this.btnDevolver.Size = new System.Drawing.Size(234, 58);
+            this.btnDevolver.Size = new System.Drawing.Size(170, 39);
             this.btnDevolver.TabIndex = 17;
             this.btnDevolver.Text = "Devolver";
             this.btnDevolver.UseVisualStyleBackColor = false;
@@ -367,11 +358,11 @@
             this.grpBuscarRenta.Controls.Add(this.btnRentasActivas);
             this.grpBuscarRenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpBuscarRenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.grpBuscarRenta.Location = new System.Drawing.Point(1027, 154);
-            this.grpBuscarRenta.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.grpBuscarRenta.Location = new System.Drawing.Point(747, 103);
+            this.grpBuscarRenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grpBuscarRenta.Name = "grpBuscarRenta";
-            this.grpBuscarRenta.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.grpBuscarRenta.Size = new System.Drawing.Size(1314, 150);
+            this.grpBuscarRenta.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.grpBuscarRenta.Size = new System.Drawing.Size(956, 100);
             this.grpBuscarRenta.TabIndex = 3;
             this.grpBuscarRenta.TabStop = false;
             this.grpBuscarRenta.Text = "Historial de rentas";
@@ -380,10 +371,10 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(7, 69);
-            this.txtBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtBuscar.Location = new System.Drawing.Point(5, 46);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(493, 45);
+            this.txtBuscar.Size = new System.Drawing.Size(359, 34);
             this.txtBuscar.TabIndex = 0;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -392,10 +383,10 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(510, 69);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(371, 46);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(77, 51);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 34);
             this.btnBuscar.TabIndex = 1;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -408,10 +399,10 @@
             this.btnRentasActivas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRentasActivas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRentasActivas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnRentasActivas.Location = new System.Drawing.Point(612, 64);
-            this.btnRentasActivas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnRentasActivas.Location = new System.Drawing.Point(445, 43);
+            this.btnRentasActivas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRentasActivas.Name = "btnRentasActivas";
-            this.btnRentasActivas.Size = new System.Drawing.Size(234, 58);
+            this.btnRentasActivas.Size = new System.Drawing.Size(170, 39);
             this.btnRentasActivas.TabIndex = 2;
             this.btnRentasActivas.Text = "Rentas activas";
             this.btnRentasActivas.UseVisualStyleBackColor = false;
@@ -433,15 +424,15 @@
             this.colPrecioHora,
             this.colEstadoRenta,
             this.colObservaciones});
-            this.dgvRentas.Location = new System.Drawing.Point(1034, 310);
-            this.dgvRentas.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.dgvRentas.Location = new System.Drawing.Point(752, 207);
+            this.dgvRentas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvRentas.MultiSelect = false;
             this.dgvRentas.Name = "dgvRentas";
             this.dgvRentas.ReadOnly = true;
             this.dgvRentas.RowHeadersWidth = 51;
             this.dgvRentas.RowTemplate.Height = 24;
             this.dgvRentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRentas.Size = new System.Drawing.Size(1308, 934);
+            this.dgvRentas.Size = new System.Drawing.Size(951, 623);
             this.dgvRentas.TabIndex = 4;
             // 
             // colID
@@ -559,16 +550,17 @@
             // 
             // FrmRentas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2368, 1430);
+            this.ClientSize = new System.Drawing.Size(1399, 703);
             this.ControlBox = false;
             this.Controls.Add(this.lblRentas);
             this.Controls.Add(this.lblLinea);
             this.Controls.Add(this.grpDatosRenta);
             this.Controls.Add(this.grpBuscarRenta);
             this.Controls.Add(this.dgvRentas);
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRentas";
             this.Text = "Rentas";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -51,10 +51,9 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.label13.Location = new System.Drawing.Point(12, 112);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(9, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1807, 2);
+            this.label13.Size = new System.Drawing.Size(1314, 1);
             this.label13.TabIndex = 27;
             // 
             // lblGestionClientes
@@ -62,10 +61,9 @@
             this.lblGestionClientes.AutoSize = true;
             this.lblGestionClientes.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGestionClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblGestionClientes.Location = new System.Drawing.Point(1, 14);
-            this.lblGestionClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGestionClientes.Location = new System.Drawing.Point(1, 9);
             this.lblGestionClientes.Name = "lblGestionClientes";
-            this.lblGestionClientes.Size = new System.Drawing.Size(646, 88);
+            this.lblGestionClientes.Size = new System.Drawing.Size(457, 62);
             this.lblGestionClientes.TabIndex = 26;
             this.lblGestionClientes.Text = "Equipo del vehículo";
             // 
@@ -81,9 +79,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(66, 200);
+            this.groupBox1.Location = new System.Drawing.Point(48, 133);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(628, 832);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(457, 555);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del equipo";
@@ -92,10 +92,11 @@
             // 
             this.txtDescripcion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescripcion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(50, 295);
+            this.txtDescripcion.Location = new System.Drawing.Point(36, 197);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(531, 226);
+            this.txtDescripcion.Size = new System.Drawing.Size(387, 151);
             this.txtDescripcion.TabIndex = 23;
             // 
             // btnGuardar
@@ -106,10 +107,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnGuardar.Location = new System.Drawing.Point(80, 565);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(58, 377);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(140, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(102, 39);
             this.btnGuardar.TabIndex = 22;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -123,10 +123,9 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(266, 689);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLimpiar.Location = new System.Drawing.Point(193, 459);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(140, 58);
+            this.btnLimpiar.Size = new System.Drawing.Size(102, 39);
             this.btnLimpiar.TabIndex = 21;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -140,10 +139,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEliminar.Location = new System.Drawing.Point(80, 689);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Location = new System.Drawing.Point(58, 459);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(140, 58);
+            this.btnEliminar.Size = new System.Drawing.Size(102, 39);
             this.btnEliminar.TabIndex = 20;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -157,10 +155,9 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEditar.Location = new System.Drawing.Point(266, 565);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Location = new System.Drawing.Point(193, 377);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(140, 58);
+            this.btnEditar.Size = new System.Drawing.Size(102, 39);
             this.btnEditar.TabIndex = 19;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -170,9 +167,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 238);
+            this.label2.Location = new System.Drawing.Point(31, 159);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 38);
+            this.label2.Size = new System.Drawing.Size(128, 28);
             this.label2.TabIndex = 2;
             this.label2.Text = "Descripción:";
             // 
@@ -180,9 +178,10 @@
             // 
             this.txtNombreDelEquipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombreDelEquipo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreDelEquipo.Location = new System.Drawing.Point(50, 158);
+            this.txtNombreDelEquipo.Location = new System.Drawing.Point(36, 105);
+            this.txtNombreDelEquipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreDelEquipo.Name = "txtNombreDelEquipo";
-            this.txtNombreDelEquipo.Size = new System.Drawing.Size(526, 45);
+            this.txtNombreDelEquipo.Size = new System.Drawing.Size(383, 34);
             this.txtNombreDelEquipo.TabIndex = 1;
             this.txtNombreDelEquipo.TextChanged += new System.EventHandler(this.txtNombreDelEquipo_TextChanged);
             // 
@@ -190,9 +189,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 86);
+            this.label1.Location = new System.Drawing.Point(31, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 38);
+            this.label1.Size = new System.Drawing.Size(200, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del equipo:";
             // 
@@ -200,9 +200,10 @@
             // 
             this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBuscar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(786, 267);
+            this.txtBuscar.Location = new System.Drawing.Point(572, 178);
+            this.txtBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(471, 45);
+            this.txtBuscar.Size = new System.Drawing.Size(343, 34);
             this.txtBuscar.TabIndex = 33;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -211,9 +212,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.label5.Location = new System.Drawing.Point(780, 200);
+            this.label5.Location = new System.Drawing.Point(567, 133);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 38);
+            this.label5.Size = new System.Drawing.Size(75, 28);
             this.label5.TabIndex = 32;
             this.label5.Text = "Buscar";
             // 
@@ -222,11 +224,12 @@
             this.dgvEquipoDelVehiculo.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvEquipoDelVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquipoDelVehiculo.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dgvEquipoDelVehiculo.Location = new System.Drawing.Point(786, 325);
+            this.dgvEquipoDelVehiculo.Location = new System.Drawing.Point(572, 217);
+            this.dgvEquipoDelVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEquipoDelVehiculo.Name = "dgvEquipoDelVehiculo";
             this.dgvEquipoDelVehiculo.RowHeadersWidth = 72;
             this.dgvEquipoDelVehiculo.RowTemplate.Height = 31;
-            this.dgvEquipoDelVehiculo.Size = new System.Drawing.Size(976, 872);
+            this.dgvEquipoDelVehiculo.Size = new System.Drawing.Size(710, 581);
             this.dgvEquipoDelVehiculo.TabIndex = 31;
             this.dgvEquipoDelVehiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEquipoDelVehiculo_CellClick);
             // 
@@ -235,19 +238,18 @@
             this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.Location = new System.Drawing.Point(1284, 267);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBuscar.Location = new System.Drawing.Point(934, 178);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(77, 51);
+            this.btnBuscar.Size = new System.Drawing.Size(56, 34);
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmEquipo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1827, 1228);
+            this.ClientSize = new System.Drawing.Size(1329, 703);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.label5);
@@ -255,6 +257,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblGestionClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmEquipo";
             this.Text = "Equipo del vehiculo";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

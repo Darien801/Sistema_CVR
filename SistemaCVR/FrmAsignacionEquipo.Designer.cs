@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAsignacionEquipo));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblRenta = new System.Windows.Forms.Label();
             this.lblEquipo = new System.Windows.Forms.Label();
@@ -37,10 +38,10 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.dgvEquipoAsignado = new System.Windows.Forms.DataGridView();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEquipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquipoAsignado)).BeginInit();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblTitulo.Location = new System.Drawing.Point(12, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(160, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(264, 46);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Asignar equipo";
             // 
@@ -63,7 +64,7 @@
             this.lblRenta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
             this.lblRenta.Location = new System.Drawing.Point(14, 62);
             this.lblRenta.Name = "lblRenta";
-            this.lblRenta.Size = new System.Drawing.Size(61, 28);
+            this.lblRenta.Size = new System.Drawing.Size(63, 25);
             this.lblRenta.TabIndex = 1;
             this.lblRenta.Text = "Renta";
             // 
@@ -73,7 +74,7 @@
             this.lblEquipo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEquipo.Location = new System.Drawing.Point(14, 110);
             this.lblEquipo.Name = "lblEquipo";
-            this.lblEquipo.Size = new System.Drawing.Size(83, 28);
+            this.lblEquipo.Size = new System.Drawing.Size(82, 28);
             this.lblEquipo.TabIndex = 2;
             this.lblEquipo.Text = "Equipo:";
             // 
@@ -96,7 +97,7 @@
             this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.Location = new System.Drawing.Point(14, 160);
             this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(105, 28);
+            this.lblCantidad.Size = new System.Drawing.Size(101, 28);
             this.lblCantidad.TabIndex = 4;
             this.lblCantidad.Text = "Cantidad:";
             // 
@@ -105,12 +106,24 @@
             this.nudCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCantidad.Location = new System.Drawing.Point(130, 156);
             this.nudCantidad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudCantidad.Maximum = new decimal(new int[] { 99, 0, 0, 0});
-            this.nudCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0});
+            this.nudCantidad.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.nudCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(100, 34);
             this.nudCantidad.TabIndex = 5;
-            this.nudCantidad.Value = new decimal(new int[] { 1, 0, 0, 0});
+            this.nudCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // btnAgregar
             // 
@@ -218,7 +231,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 560);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblRenta);
             this.Controls.Add(this.lblEquipo);
@@ -229,6 +241,8 @@
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.dgvEquipoAsignado);
             this.Controls.Add(this.btnCerrar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

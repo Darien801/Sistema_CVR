@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmEstado));
             this.label13 = new System.Windows.Forms.Label();
             this.lblGestionClientes = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -45,10 +46,9 @@
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.label13.Location = new System.Drawing.Point(26, 118);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(19, 79);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(1671, 2);
+            this.label13.Size = new System.Drawing.Size(1215, 1);
             this.label13.TabIndex = 29;
             // 
             // lblGestionClientes
@@ -56,10 +56,9 @@
             this.lblGestionClientes.AutoSize = true;
             this.lblGestionClientes.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGestionClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.lblGestionClientes.Location = new System.Drawing.Point(16, 14);
-            this.lblGestionClientes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGestionClientes.Location = new System.Drawing.Point(12, 9);
             this.lblGestionClientes.Name = "lblGestionClientes";
-            this.lblGestionClientes.Size = new System.Drawing.Size(637, 88);
+            this.lblGestionClientes.Size = new System.Drawing.Size(451, 62);
             this.lblGestionClientes.TabIndex = 28;
             this.lblGestionClientes.Text = "Estado del vehículo";
             // 
@@ -73,9 +72,11 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.groupBox1.Location = new System.Drawing.Point(60, 166);
+            this.groupBox1.Location = new System.Drawing.Point(44, 111);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(628, 832);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(457, 555);
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del estado";
@@ -88,10 +89,10 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEditar.Location = new System.Drawing.Point(307, 323);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEditar.Location = new System.Drawing.Point(223, 215);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(139, 58);
+            this.btnEditar.Size = new System.Drawing.Size(101, 39);
             this.btnEditar.TabIndex = 22;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -105,10 +106,10 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnEliminar.Location = new System.Drawing.Point(307, 417);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(223, 278);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(139, 58);
+            this.btnEliminar.Size = new System.Drawing.Size(101, 39);
             this.btnEliminar.TabIndex = 23;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -122,10 +123,10 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnLimpiar.Location = new System.Drawing.Point(131, 417);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnLimpiar.Location = new System.Drawing.Point(95, 278);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(139, 58);
+            this.btnLimpiar.Size = new System.Drawing.Size(101, 39);
             this.btnLimpiar.TabIndex = 24;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -139,10 +140,10 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnGuardar.Location = new System.Drawing.Point(131, 323);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnGuardar.Location = new System.Drawing.Point(95, 215);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(139, 58);
+            this.btnGuardar.Size = new System.Drawing.Size(101, 39);
             this.btnGuardar.TabIndex = 21;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
@@ -151,41 +152,46 @@
             // txtNombreEstado
             // 
             this.txtNombreEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNombreEstado.Location = new System.Drawing.Point(47, 142);
+            this.txtNombreEstado.Location = new System.Drawing.Point(34, 95);
+            this.txtNombreEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombreEstado.Name = "txtNombreEstado";
-            this.txtNombreEstado.Size = new System.Drawing.Size(526, 45);
+            this.txtNombreEstado.Size = new System.Drawing.Size(383, 34);
             this.txtNombreEstado.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, 86);
+            this.label1.Location = new System.Drawing.Point(31, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 38);
+            this.label1.Size = new System.Drawing.Size(198, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre del estado:";
             // 
             // dgvEstadoVehiculo
             // 
             this.dgvEstadoVehiculo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEstadoVehiculo.Location = new System.Drawing.Point(719, 166);
+            this.dgvEstadoVehiculo.Location = new System.Drawing.Point(523, 111);
+            this.dgvEstadoVehiculo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvEstadoVehiculo.Name = "dgvEstadoVehiculo";
             this.dgvEstadoVehiculo.RowHeadersWidth = 72;
             this.dgvEstadoVehiculo.RowTemplate.Height = 31;
-            this.dgvEstadoVehiculo.Size = new System.Drawing.Size(980, 636);
+            this.dgvEstadoVehiculo.Size = new System.Drawing.Size(713, 424);
             this.dgvEstadoVehiculo.TabIndex = 31;
             this.dgvEstadoVehiculo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEstadoVehiculo_CellClick);
             // 
             // FrmEstado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1812, 1054);
+            this.ClientSize = new System.Drawing.Size(1318, 703);
             this.Controls.Add(this.dgvEstadoVehiculo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblGestionClientes);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FrmEstado";
             this.Text = "FrmEstado";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
