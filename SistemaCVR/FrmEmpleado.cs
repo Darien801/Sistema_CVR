@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace SistemaCVR
 {
@@ -76,6 +77,11 @@ namespace SistemaCVR
             chkEstado.Checked = true;
         }
 
+        private bool validarDui(string dui)
+        {
+            return Regex.IsMatch(dui, @"^\d{8}-\d$");
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             
@@ -90,7 +96,17 @@ namespace SistemaCVR
                 return;
             }
 
-            string estado = chkEstado.Checked ? "Activo" : "Inactivo";
+            if (!validarDui(txtDui.Text.Trim()))
+            {
+                MessageBox.Show("El DUI no cumple con el formato correcto.",
+                                "Datos inválidos",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                                );
+                txtDui.Focus();
+                return;
+            }
+                string estado = chkEstado.Checked ? "Activo" : "Inactivo";
 
             // Convertir la contraseña a MD5
             string hash = con.GenerarHashMD5(txtPass.Text.Trim());
@@ -117,7 +133,9 @@ namespace SistemaCVR
                 "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             mostrarDatos(txtBuscar.Text.Trim());
-            LimpiarCampos();
+         
+                LimpiarCampos();
+
         }
         
 
