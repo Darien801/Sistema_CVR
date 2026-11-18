@@ -43,7 +43,12 @@
             // 
             // pnlContenido
             // 
+<<<<<<< HEAD
             this.pnlContenido.Location = new System.Drawing.Point(300, 0);
+=======
+            this.pnlContenido.Location = new System.Drawing.Point(412, 0);
+            this.pnlContenido.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(2000, 4000);
             this.pnlContenido.TabIndex = 4;
@@ -60,6 +65,10 @@
             this.pnlMenuLateral.Controls.Add(this.btnClientes);
             this.pnlMenuLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenuLateral.Location = new System.Drawing.Point(0, 0);
+<<<<<<< HEAD
+=======
+            this.pnlMenuLateral.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.pnlMenuLateral.Name = "pnlMenuLateral";
             this.pnlMenuLateral.Size = new System.Drawing.Size(300, 703);
             this.pnlMenuLateral.TabIndex = 2;
@@ -72,9 +81,16 @@
             this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnSalir.Location = new System.Drawing.Point(57, 666);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(154, 36);
+=======
+            this.btnSalir.Location = new System.Drawing.Point(78, 999);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(212, 54);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnSalir.TabIndex = 10;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = false;
@@ -99,12 +115,18 @@
             this.btnInicio.ForeColor = System.Drawing.SystemColors.Control;
             this.btnInicio.Image = ((System.Drawing.Image)(resources.GetObject("btnInicio.Image")));
             this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnInicio.Location = new System.Drawing.Point(46, 178);
+=======
+            this.btnInicio.Location = new System.Drawing.Point(63, 267);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(154, 36);
             this.btnInicio.TabIndex = 7;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnReportes
             // 
@@ -114,7 +136,12 @@
             this.btnReportes.ForeColor = System.Drawing.SystemColors.Control;
             this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
             this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnReportes.Location = new System.Drawing.Point(46, 426);
+=======
+            this.btnReportes.Location = new System.Drawing.Point(63, 639);
+            this.btnReportes.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(154, 36);
             this.btnReportes.TabIndex = 5;
@@ -130,7 +157,12 @@
             this.btnRentas.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRentas.Image = ((System.Drawing.Image)(resources.GetObject("btnRentas.Image")));
             this.btnRentas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnRentas.Location = new System.Drawing.Point(46, 360);
+=======
+            this.btnRentas.Location = new System.Drawing.Point(63, 540);
+            this.btnRentas.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnRentas.Name = "btnRentas";
             this.btnRentas.Size = new System.Drawing.Size(154, 36);
             this.btnRentas.TabIndex = 4;
@@ -146,7 +178,12 @@
             this.btnVehiculos.ForeColor = System.Drawing.SystemColors.Control;
             this.btnVehiculos.Image = ((System.Drawing.Image)(resources.GetObject("btnVehiculos.Image")));
             this.btnVehiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnVehiculos.Location = new System.Drawing.Point(46, 296);
+=======
+            this.btnVehiculos.Location = new System.Drawing.Point(63, 444);
+            this.btnVehiculos.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnVehiculos.Name = "btnVehiculos";
             this.btnVehiculos.Size = new System.Drawing.Size(154, 36);
             this.btnVehiculos.TabIndex = 1;
@@ -162,7 +199,12 @@
             this.btnClientes.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
             this.btnClientes.Location = new System.Drawing.Point(46, 236);
+=======
+            this.btnClientes.Location = new System.Drawing.Point(63, 354);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(154, 36);
             this.btnClientes.TabIndex = 0;
@@ -179,6 +221,10 @@
             this.Controls.Add(this.pnlContenido);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+<<<<<<< HEAD
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.Name = "FrmMenuPrincipal2";
             this.Text = "FrmMenuPrincipal2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

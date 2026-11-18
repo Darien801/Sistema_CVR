@@ -131,6 +131,7 @@
         AElFTkSuQmCC
 </value>
   </data>
+<<<<<<< HEAD
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAcAEBAAAAAAIAD/AgAAdgAAABgYAAAAACAAIwUAAHUDAAAgIAAAAAAgAAoHAACYCAAAMDAAAAAA
@@ -729,4 +730,6 @@
         NBqNRqPRaDQaDYD/B7bL9U/t4EnAAAAAAElFTkSuQmCC
 </value>
   </data>
+=======
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
 </root>

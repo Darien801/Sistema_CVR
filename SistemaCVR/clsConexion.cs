@@ -18,11 +18,18 @@ namespace SistemaCVR
         public DataTable Consultar(string sql) 
         {
             DataTable tabla = new DataTable();
-
-            using (SqlConnection conexion = new SqlConnection(cadena))
-            using(SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion))
+            try
             {
-                adaptador.Fill(tabla);
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                using (SqlDataAdapter adaptador = new SqlDataAdapter(sql, conexion))
+                {
+                    adaptador.Fill(tabla);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable(); 
             }
 
             return tabla;
@@ -31,15 +38,23 @@ namespace SistemaCVR
         public DataTable FiltrarDatos(string sql, SqlParameter[] parametros)
         {
             DataTable tabla = new DataTable();
-            using (SqlConnection conexion = new SqlConnection(cadena))
-            using (SqlCommand comando = new SqlCommand(sql, conexion))
+            try
             {
-                if(parametros != null) comando.Parameters.AddRange(parametros);
-                using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
                 {
-                    adaptador.Fill(tabla);
-                }
+                    if (parametros != null) comando.Parameters.AddRange(parametros);
 
+                    using (SqlDataAdapter adaptador = new SqlDataAdapter(comando))
+                    {
+                        adaptador.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al consultar la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return new DataTable();
             }
             return tabla;
         }
@@ -47,27 +62,43 @@ namespace SistemaCVR
         public int ejecutarComando(string sql, SqlParameter[] parametros)
         {
             int filasAfectadas = 0;
-            using (SqlConnection conexion = new SqlConnection(cadena))
-            using (SqlCommand comando = new SqlCommand(sql, conexion))
+            try
             {
-                
-                    comando.Parameters.AddRange(parametros);
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    if (parametros != null) comando.Parameters.AddRange(parametros);
+
                     conexion.Open();
                     filasAfectadas = comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar el comando en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
             }
             return filasAfectadas;
         }
 
         public object ejecutarEscalar(string sql, SqlParameter[] parametros)
         {
-            using (SqlConnection conexion = new SqlConnection(cadena))
-            using (SqlCommand comando = new SqlCommand(sql, conexion))
+            try
             {
-                if (parametros != null)
-                    comando.Parameters.AddRange(parametros);
+                using (SqlConnection conexion = new SqlConnection(cadena))
+                using (SqlCommand comando = new SqlCommand(sql, conexion))
+                {
+                    if (parametros != null)
+                        comando.Parameters.AddRange(parametros);
 
-                conexion.Open();
-                return comando.ExecuteScalar();
+                    conexion.Open();
+                    return comando.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar el comando en la base de datos: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
         }
 
@@ -79,28 +110,43 @@ namespace SistemaCVR
             string valor
             )
         {
-            combo.DataSource = Consultar(sql);
-            combo.DisplayMember = visible;
-            combo.ValueMember = valor;
-            combo.SelectedIndex = -1;
+            try
+            {
+                combo.DataSource = Consultar(sql);
+                combo.DisplayMember = visible;
+                combo.ValueMember = valor;
+                combo.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar el ComboBox: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
         public string GenerarHashMD5(string texto)
         {
-            using (MD5 md5 = MD5.Create())
+            try
             {
-                byte[] entrada = Encoding.UTF8.GetBytes(texto);
-                byte[] hash = md5.ComputeHash(entrada);
-
-                StringBuilder resultado = new StringBuilder();
-
-                foreach (byte b in hash)
+                using (MD5 md5 = MD5.Create())
                 {
-                    resultado.Append(b.ToString("x2"));
-                }
+                    byte[] entrada = Encoding.UTF8.GetBytes(texto);
+                    byte[] hash = md5.ComputeHash(entrada);
 
-                return resultado.ToString();
+                    StringBuilder resultado = new StringBuilder();
+
+                    foreach (byte b in hash)
+                    {
+                        resultado.Append(b.ToString("x2"));
+                    }
+
+                    return resultado.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el hash MD5: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
             }
         }
 

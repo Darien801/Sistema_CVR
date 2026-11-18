@@ -173,7 +173,7 @@ namespace SistemaCVR
                     estadoVehiculo = "Reservado";
                     break;
                 default:
-                    estadoVehiculo = "En trámite";
+                    estadoVehiculo = "Cancelada";
                     break;
             }
 

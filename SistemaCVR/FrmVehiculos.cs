@@ -194,7 +194,7 @@ namespace SistemaCVR
 
             DataGridViewRow fila = dgvVehiculos.Rows[e.RowIndex];
 
-            id_vehiculo = Convert.ToInt32(fila.Cells["ID"].Value);
+            id_vehiculo = Convert.ToInt32(fila.Cells[0].Value);
 
             txtMostrarModelo.Text = fila.Cells["Modelo"].Value?.ToString();
             txtMostrarMarca.Text = fila.Cells["Marca"].Value?.ToString();

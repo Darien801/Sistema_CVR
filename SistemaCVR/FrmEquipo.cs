@@ -59,7 +59,7 @@ namespace SistemaCVR
                 return;
             }
             
-            string sql = $"insert into accesorio (nombreAccesorio, descripcion) values ('{txtNombreDelEquipo.Text}', '{txtDescripcion.Text}')";
+            string sql = $"insert into accesorio (nombreAccesorio, descripcion) values (@nombreAccesorio, @descripcion)";
 
             SqlParameter[] parametros = 
             {

@@ -125,11 +125,20 @@
             // 
             // dtpDesde
             // 
+            this.dtpDesde.CustomFormat = "dd/MM/yyyy";
             this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDesde.Location = new System.Drawing.Point(495, 43);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDesde.Name = "dtpDesde";
+=======
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDesde.Location = new System.Drawing.Point(495, 43);
+            this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.ShowUpDown = true;
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.dtpDesde.Size = new System.Drawing.Size(151, 34);
             this.dtpDesde.TabIndex = 3;
             // 
@@ -144,11 +153,20 @@
             // 
             // dtpHasta
             // 
+            this.dtpHasta.CustomFormat = "dd/MM/yyyy ";
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpHasta.Location = new System.Drawing.Point(744, 43);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHasta.Name = "dtpHasta";
+=======
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpHasta.Location = new System.Drawing.Point(744, 43);
+            this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.ShowUpDown = true;
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.dtpHasta.Size = new System.Drawing.Size(151, 34);
             this.dtpHasta.TabIndex = 5;
             // 
@@ -182,7 +200,7 @@
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(149, 39);
             this.btnExportar.TabIndex = 7;
-            this.btnExportar.Text = "Exportar CSV";
+            this.btnExportar.Text = "Exportar a Exel";
             this.btnExportar.UseVisualStyleBackColor = false;
             this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
@@ -224,7 +242,10 @@
             this.Controls.Add(this.grpFiltros);
             this.Controls.Add(this.dgvReporte);
             this.Controls.Add(this.lblResumen);
+<<<<<<< HEAD
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+=======
+>>>>>>> 092aa1eb90a6e6995adf0d59db691140476eded3
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmReportes";
             this.Text = "Reportes";

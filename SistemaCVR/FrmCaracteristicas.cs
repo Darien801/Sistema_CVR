@@ -115,7 +115,7 @@ namespace SistemaCVR
 
         private void dgvModelo_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (idModeloSelected < 0) return;
+            if (e.RowIndex < 0) return;
 
             DataGridViewRow fila = dgvModelo.Rows[e.RowIndex];
 
@@ -125,7 +125,7 @@ namespace SistemaCVR
 
         private void dgvMarca_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (idMarcaSelected < 0) return;
+            if (e.RowIndex < 0) return;
 
             DataGridViewRow fila = dgvMarca.Rows[e.RowIndex];
 

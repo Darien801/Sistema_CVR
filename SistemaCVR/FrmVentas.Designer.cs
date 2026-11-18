@@ -245,9 +245,7 @@
             this.cmbEstadoVenta.ForeColor = System.Drawing.Color.Black;
             this.cmbEstadoVenta.FormattingEnabled = true;
             this.cmbEstadoVenta.Items.AddRange(new object[] {
-            "Completada",
-            "Pendiente",
-            "En trámite"});
+            "Completada"});
             this.cmbEstadoVenta.Location = new System.Drawing.Point(200, 358);
             this.cmbEstadoVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbEstadoVenta.Name = "cmbEstadoVenta";
