@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenuPrincipal));
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.panelSubMenuConfig = new System.Windows.Forms.Panel();
             this.btnConfEstado = new System.Windows.Forms.Button();
             this.btnConfEquipo = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.btnVehiculos = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pnlContenido = new System.Windows.Forms.Panel();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.pnlMenuLateral.SuspendLayout();
             this.panelSubMenuConfig.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,23 @@
             this.pnlMenuLateral.Name = "pnlMenuLateral";
             this.pnlMenuLateral.Size = new System.Drawing.Size(412, 1513);
             this.pnlMenuLateral.TabIndex = 1;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalir.Location = new System.Drawing.Point(63, 1412);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(212, 54);
+            this.btnSalir.TabIndex = 9;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // panelSubMenuConfig
             // 
@@ -178,6 +195,7 @@
             this.btnInicio.TabIndex = 7;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = false;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnConfiguracion
             // 
@@ -306,23 +324,6 @@
             this.pnlContenido.Name = "pnlContenido";
             this.pnlContenido.Size = new System.Drawing.Size(2234, 1513);
             this.pnlContenido.TabIndex = 3;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(161)))));
-            this.btnSalir.FlatAppearance.BorderSize = 0;
-            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalir.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(63, 1412);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(212, 54);
-            this.btnSalir.TabIndex = 9;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = false;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // FrmMenuPrincipal
             // 

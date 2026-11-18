@@ -166,5 +166,10 @@ namespace SistemaCVR
                 this.Close();
             }
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            pnlContenido.Controls.Clear();
+        }
     }
 }
