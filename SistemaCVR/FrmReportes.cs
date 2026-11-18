@@ -79,10 +79,9 @@ namespace SistemaCVR
                                 r.fecha_fin AS FinPrevisto,
                                 r.fecha_devolucion AS Devolucion,
                                 r.precioHora AS PrecioHora,
-                                CAST(DATEDIFF(MINUTE, r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin)) / 60.0 AS decimal(10, 2)) AS Horas,
-                                CAST(CASE WHEN r.estadoRenta = N'Cancelada' THEN 0
-                                          ELSE DATEDIFF(MINUTE, r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin)) / 60.0 * r.precioHora
-                                     END AS decimal(12, 2)) AS Total,
+                                DATEDIFF_BIG( SECOND, r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin) ) / 3600 AS Horas,
+                                CAST( CASE WHEN r.estadoRenta = N'Cancelada' THEN 0 ELSE DATEDIFF( HOUR, r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin)
+                                ) * r.precioHora END AS decimal(12, 2) ) AS Total,
                                 r.estadoRenta AS Estado
                             FROM renta r
                             INNER JOIN cliente c
@@ -371,9 +370,9 @@ namespace SistemaCVR
                                 r.fecha_fin AS FinPrevisto,
                                 r.fecha_devolucion AS Devolucion,
                                 r.precioHora AS PrecioHora,
-                                CAST(CASE WHEN r.estadoRenta = N'Cancelada' THEN 0
-                                          ELSE DATEDIFF(MINUTE, r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin)) / 60.0 * r.precioHora
-                                     END AS decimal(12, 2)) AS Total,
+                                CAST( CASE WHEN r.estadoRenta = N'Cancelada'
+                                THEN 0 ELSE (DATEDIFF_BIG( SECOND,  r.fecha_inicio, ISNULL(r.fecha_devolucion, r.fecha_fin) ) / 3600) * r.precioHora END 
+                                AS decimal(12, 2)) AS Total,
                                 r.estadoRenta AS Estado
                             FROM renta r
                             INNER JOIN cliente c

@@ -124,11 +124,13 @@
             // 
             // dtpDesde
             // 
+            this.dtpDesde.CustomFormat = "dd/MM/yyyy";
             this.dtpDesde.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDesde.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpDesde.Location = new System.Drawing.Point(495, 43);
             this.dtpDesde.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDesde.Name = "dtpDesde";
+            this.dtpDesde.ShowUpDown = true;
             this.dtpDesde.Size = new System.Drawing.Size(151, 34);
             this.dtpDesde.TabIndex = 3;
             // 
@@ -143,11 +145,13 @@
             // 
             // dtpHasta
             // 
+            this.dtpHasta.CustomFormat = "dd/MM/yyyy ";
             this.dtpHasta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHasta.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpHasta.Location = new System.Drawing.Point(744, 43);
             this.dtpHasta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHasta.Name = "dtpHasta";
+            this.dtpHasta.ShowUpDown = true;
             this.dtpHasta.Size = new System.Drawing.Size(151, 34);
             this.dtpHasta.TabIndex = 5;
             // 
